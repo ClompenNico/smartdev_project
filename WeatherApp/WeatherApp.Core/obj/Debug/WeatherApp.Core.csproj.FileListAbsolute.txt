@@ -1,0 +1,17 @@
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\WeatherApp.Core.dll
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\WeatherApp.Core.pdb
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Binding.dll
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Core.dll
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Localization.dll
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Platform.dll
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Binding.pdb
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Core.pdb
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Localization.pdb
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Platform.pdb
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csprojResolveAssemblyReference.cache
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csproj.CopyComplete
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.dll
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.pdb
