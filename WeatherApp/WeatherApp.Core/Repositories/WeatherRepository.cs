@@ -10,7 +10,7 @@ namespace WeatherApp.Core.Repositories
 {
     public class WeatherRepository : BaseRepository, IWeatherRepository
     {
-        private const string _BASEURL = "https://api.darksky.net/forecast/[key]/37.8267,-122.4233";
+        private const string _BASEURL = "https://api.darksky.net/forecast/";
         private const string _COORDINATES = "37.8267,-122.4233";
         /*
         private const double latitude = 37.8267;

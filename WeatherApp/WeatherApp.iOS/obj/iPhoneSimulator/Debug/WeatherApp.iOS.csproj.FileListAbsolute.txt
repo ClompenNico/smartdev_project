@@ -37,3 +37,4 @@ C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\bin\iPhoneSimul
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\bin\iPhoneSimulator\Debug\MvvmCross.Platform.dll.mdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\bin\iPhoneSimulator\Debug\MvvmCross.Platform.iOS.dll.mdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.xml
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\bin\iPhoneSimulator\Debug\WeatherApp.Core.dll.mdb

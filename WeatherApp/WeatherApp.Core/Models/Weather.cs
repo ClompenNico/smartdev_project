@@ -11,6 +11,6 @@ namespace WeatherApp.Core.Models
         public double latitude { get; set; }
         public double longitude { get; set; }
         public string timezone { get; set; }
-        //public Currently currently { get; set; }
+        public Currently currently { get; set; }
     }
 }
