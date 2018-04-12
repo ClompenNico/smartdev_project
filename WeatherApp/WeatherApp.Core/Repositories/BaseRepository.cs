@@ -9,7 +9,7 @@ namespace NMCT.Resto.Core.Repositories
 {
     public class BaseRepository
     {
-        public const string _API_KEY = "eb2489e479f0bc360823f38d47e6f7fb/";
+        public const string _API_KEY = "eb2489e479f0bc360823f38d47e6f7fb";
 
         private HttpClient CreateHttpClient()
         {
