@@ -61,9 +61,17 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Views\TabDetailsView.cs" />
+    <Compile Include="Views\TabDetailsView.designer.cs">
+      <DependentUpon>TabDetailsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\WeatherView.cs" />
     <Compile Include="Views\WeatherView.designer.cs">
       <DependentUpon>WeatherView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WeatherTabsView.cs" />
+    <Compile Include="Views\WeatherTabsView.designer.cs">
+      <DependentUpon>WeatherTabsView.cs</DependentUpon>
     </Compile>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist">
@@ -106,6 +114,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Entitlements.plist" />
+    <BundleResource Include="Resources\Images\weather.png" />
+    <BundleResource Include="Resources\Images\details.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeatherApp.Core\WeatherApp.Core.csproj">

@@ -10,8 +10,23 @@
       <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool\Main.storyboardc\3441-view-3442.nib">
+      <LogicalName>Main.storyboardc/3441-view-3442.nib</LogicalName>
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool\Main.storyboardc\Info.plist">
       <LogicalName>Main.storyboardc/Info.plist</LogicalName>
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool\Main.storyboardc\TabDetailsView.nib">
+      <LogicalName>Main.storyboardc/TabDetailsView.nib</LogicalName>
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool\Main.storyboardc\WeatherTabsView.nib">
+      <LogicalName>Main.storyboardc/WeatherTabsView.nib</LogicalName>
       <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>

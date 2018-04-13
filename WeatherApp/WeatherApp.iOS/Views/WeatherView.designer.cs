@@ -16,6 +16,10 @@ namespace WeatherApp.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblHourSummary { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblLatitude { get; set; }
 
         [Outlet]
@@ -32,6 +36,11 @@ namespace WeatherApp.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (lblHourSummary != null) {
+                lblHourSummary.Dispose ();
+                lblHourSummary = null;
+            }
+
             if (lblLatitude != null) {
                 lblLatitude.Dispose ();
                 lblLatitude = null;

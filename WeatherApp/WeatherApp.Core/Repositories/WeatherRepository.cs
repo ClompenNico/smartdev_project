@@ -14,8 +14,9 @@ namespace WeatherApp.Core.Repositories
     {
         private const string _BASEURL = "https://api.darksky.net/forecast/";
         //private const string _COORDINATES = "37.8267,-122.4233";
-        double _LATITUDE = 37.8267;         //private const 
-        double _LONGITUDE = -122.4233;      //private const 
+        double _LATITUDE = 50.815474;         //private const     37.8267
+        double _LONGITUDE = 3.2718397999999524;      //private const     -122.4233
+        string _PARAMETER = "units=auto";
 
         /*
         private readonly IMvxMessenger _messenger;
@@ -35,7 +36,7 @@ namespace WeatherApp.Core.Repositories
 
         public Task<Weather>GetWeather()
         {
-            string url = String.Format("{0}{1}/{2},{3}", _BASEURL, _API_KEY, _LATITUDE, _LONGITUDE);
+            string url = String.Format("{0}{1}/{2},{3}?{4}", _BASEURL, _API_KEY, _LATITUDE, _LONGITUDE, _PARAMETER);
             return GetAsync<Weather>(url);
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,17 @@ namespace WeatherApp.Core.Models
 {
     public class Weather
     {
-        public double latitude { get; set; }
-        public double longitude { get; set; }
-        public string timezone { get; set; }
-        public Currently currently { get; set; }
+        [JsonProperty(PropertyName = "latitude")]
+        public double Latitude { get; set; }
+        [JsonProperty(PropertyName = "longitude")]
+        public double Longitude { get; set; }
+        [JsonProperty(PropertyName = "timezone")]
+        public string Timezone { get; set; }
+
+        [JsonProperty(PropertyName = "currently")]
+        public Currently Currently { get; set; }
+
+        [JsonProperty(PropertyName = "minutely")]
+        public Minutely Minutely { get; set; }
     }
 }

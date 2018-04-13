@@ -44,3 +44,5 @@ C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimul
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\WeatherApp.iOS.exe
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\WeatherApp.iOS.pdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\bin\iPhoneSimulator\Debug\WeatherApp.Core.dll.mdb
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Images\weather.png
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Images\details.png

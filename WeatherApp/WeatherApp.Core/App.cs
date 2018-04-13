@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WeatherApp.Core.Services;
+using WeatherApp.Core.ViewModels;
 
 namespace WeatherApp.Core
 {
@@ -26,7 +27,7 @@ namespace WeatherApp.Core
                 .RegisterAsLazySingleton();
 
             Mvx.LazyConstructAndRegisterSingleton<IMvxMessenger, MvxMessengerHub>();
-            RegisterNavigationServiceAppStart<ViewModels.WeatherViewModel>();
+            RegisterNavigationServiceAppStart<WeatherTabsViewModel>();
             Mvx.LazyConstructAndRegisterSingleton<ILocationService, LocationService>();
 
         }

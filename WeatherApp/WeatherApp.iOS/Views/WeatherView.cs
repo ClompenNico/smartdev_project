@@ -20,10 +20,13 @@ namespace WeatherApp.iOS
 
             MvxFluentBindingDescriptionSet<WeatherView, WeatherViewModel> set = this.CreateBindingSet<WeatherView, WeatherViewModel>();
 
-            set.Bind(lblTemperature).To(vm => vm.Weather.currently.Temperature);
-            set.Bind(lblSummary).To(vm => vm.Weather.currently.Summary);
-            set.Bind(lblLatitude).To(vm => vm.Weather.latitude);
-            set.Bind(lblLongitude).To(vm => vm.Weather.longitude);
+            set.Bind(lblTemperature).To(vm => vm.Weather.Currently.Temperature);
+            set.Bind(lblSummary).To(vm => vm.Weather.Currently.Summary);
+            set.Bind(lblHourSummary).To(vm => vm.Weather.Minutely.Summary);
+
+            set.Bind(lblLatitude).To(vm => vm.Weather.Latitude);
+            set.Bind(lblLongitude).To(vm => vm.Weather.Longitude);
+            //set.Bind(imgBackground.Image = UIImage.FromFile("Images/Sunrise.png"));
 
             set.Apply();
         }
