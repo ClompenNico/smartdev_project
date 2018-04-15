@@ -27,27 +27,33 @@ namespace WeatherApp.Core.ViewModels
         //create a lazy instance for each viewmodel of the tabs in the tabview
         private readonly Lazy<WeatherViewModel> _weatherViewModel;
         private readonly Lazy<TabDetailsViewModel> _tabDetailsViewModel;
+        private readonly Lazy<TabWeekViewModel> _tabWeekViewModel;
 
         //property to access value of the lazy instance
         public WeatherViewModel WeatherVM => _weatherViewModel.Value;
         public TabDetailsViewModel TabDetailsVM => _tabDetailsViewModel.Value;
+        public TabWeekViewModel TabWeekVM => _tabWeekViewModel.Value;
 
         public WeatherTabsViewModel(IWeatherService weatherService)
         {
             this._weatherService = weatherService;
 
-            //GetWeatherData();
+            GetWeatherData();
 
             //initialize lazy instance via ioc construct
             _weatherViewModel = new Lazy<WeatherViewModel>(Mvx.IocConstruct<WeatherViewModel>);
             _tabDetailsViewModel = new Lazy<TabDetailsViewModel>(Mvx.IocConstruct<TabDetailsViewModel>);
+            _tabWeekViewModel = new Lazy<TabWeekViewModel>(Mvx.IocConstruct<TabWeekViewModel>);
 
-            
+
         }
 
         public async void GetWeatherData()
         {
+            Weather = await _weatherService.GetWeather();
 
+            WeatherVM.Weather = this.Weather;
+            TabDetailsVM.Weather = this.Weather;
         }
     }
 }

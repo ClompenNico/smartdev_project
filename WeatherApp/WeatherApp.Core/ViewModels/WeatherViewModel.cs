@@ -23,7 +23,7 @@ namespace WeatherApp.Core.ViewModels
             _messenger = messenger;
             _token = messenger.Subscribe<LocationMessage>(OnLocationMessage);
             _weatherService = weatherService;
-            LoadData();
+            //LoadData();
         }
 
         private Weather _weather;
@@ -41,7 +41,7 @@ namespace WeatherApp.Core.ViewModels
         {
             _LATITUDE = message.Latitude;
             _LONGITUDE = message.Longitude;
-            LoadData();
+            //LoadData();
         }
         
         public async void LoadData()

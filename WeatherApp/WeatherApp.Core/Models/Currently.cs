@@ -9,6 +9,8 @@ namespace WeatherApp.Core.Models
 {
     public class Currently
     {
+        //WEATHER PAGE
+
         [JsonProperty(PropertyName = "time")]
         public long Time { get; set; }
 
@@ -20,7 +22,57 @@ namespace WeatherApp.Core.Models
 
         [JsonProperty(PropertyName = "temperature")]
         public double Temperature { get; set; }
-        
+
+        public string Temp
+        {
+            get { return Math.Round(Temperature).ToString() + "°c"; }
+        }
+
+        //DETAILS PAGE
+
+        [JsonProperty(PropertyName = "apparentTemperature")]
+        public double ApparentTemperature { get; set; }
+
+        public string ApparentTemp
+        {
+            get { return Math.Round(ApparentTemperature).ToString() + "°c"; }
+        }
+
+        [JsonProperty(PropertyName = "humidity")]
+        public double Humidity { get; set; }
+
+        public string Hum
+        {
+            get { return (Humidity * 100).ToString() + "%"; }
+        }
+
+        [JsonProperty(PropertyName = "uvIndex")]
+        public double UvIndex { get; set; }
+
+        [JsonProperty(PropertyName = "visibility")]
+        public double Visibility { get; set; }
+
+        public string Vis
+        {
+            get { return Math.Round(Visibility).ToString() + "km"; }
+        }
+
+        [JsonProperty(PropertyName = "dewPoint")]
+        public double DewPoint { get; set; }
+
+        public string Dew
+        {
+            get { return Math.Round(DewPoint).ToString() + "°c"; }
+        }
+
+        [JsonProperty(PropertyName = "pressure")]
+        public double Pressure { get; set; }
+
+        public string Press
+        {
+            get { return Math.Round(Pressure).ToString() + "mb"; }
+        }
+
         /*
         public double temperature
         {

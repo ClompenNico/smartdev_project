@@ -16,6 +16,10 @@ namespace WeatherApp.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView imgIcon { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblHourSummary { get; set; }
 
         [Outlet]
@@ -36,6 +40,11 @@ namespace WeatherApp.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (imgIcon != null) {
+                imgIcon.Dispose ();
+                imgIcon = null;
+            }
+
             if (lblHourSummary != null) {
                 lblHourSummary.Dispose ();
                 lblHourSummary = null;

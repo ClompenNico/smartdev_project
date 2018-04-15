@@ -14,8 +14,8 @@ C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\Mvvm
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Plugins.Location.pdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\MvvmCross.Plugins.Messenger.pdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csprojResolveAssemblyReference.cache
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csproj.CoreCompileInputs.cache
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csproj.CopyComplete
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.dll
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.pdb
-C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csprojResolveAssemblyReference.cache
