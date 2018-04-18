@@ -4,6 +4,7 @@ using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using UIKit;
 using WineApp.IOS;
+using UserNotifications;
 
 namespace WeatherApp.iOS
 {
@@ -15,7 +16,7 @@ namespace WeatherApp.iOS
     {
         // class-level declarations
 
-        private UIWindow window;
+        private UIWindow window = UIApplication.SharedApplication.KeyWindow;
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
@@ -38,7 +39,48 @@ namespace WeatherApp.iOS
             }
             window.MakeKeyAndVisible();
 
+            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+
+            //Andere manier
+            //UNUserNotificationCenter.Current.RequestAuthorization(options: UNAuthorizationOptions, completionHandler: (bool, Error) -> Void)
+
+            var settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null);
+            UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
+
+            // check for a notification
+
+            if (launchOptions != null)
+            {
+                // check for a local notification
+                if (launchOptions.ContainsKey(UIApplication.LaunchOptionsLocalNotificationKey))
+                {
+                    var localNotification = launchOptions[UIApplication.LaunchOptionsLocalNotificationKey] as UILocalNotification;
+                    if (localNotification != null)
+                    {
+                        UIAlertController okayAlertController = UIAlertController.Create(localNotification.AlertAction, localNotification.AlertBody, UIAlertControllerStyle.Alert);
+                        okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+
+                        Window.RootViewController.PresentViewController(okayAlertController, true, null);
+
+                        // reset our badge
+                        UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+                    }
+                }
+            }
+
             return true;
+        }
+
+        public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
+        {
+            // show an alert
+            UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
+            okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+
+            Window.RootViewController.PresentViewController(okayAlertController, true, null);
+
+            // reset our badge
+            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
         }
 
         public override void OnResignActivation(UIApplication application)

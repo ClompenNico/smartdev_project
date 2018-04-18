@@ -36,6 +36,8 @@
     <Compile Include="App.cs" />
     <Compile Include="Messages\LocationMessage.cs" />
     <Compile Include="Models\Currently.cs" />
+    <Compile Include="Models\Daily.cs" />
+    <Compile Include="Models\DailyData.cs" />
     <Compile Include="Models\Minutely.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -46,6 +48,7 @@
     <Compile Include="Services\IWeatherService.cs" />
     <Compile Include="Services\LocationService.cs" />
     <Compile Include="Services\WeatherService.cs" />
+    <Compile Include="ViewModels\NotificationsViewModel.cs" />
     <Compile Include="ViewModels\TabDetailsViewModel.cs" />
     <Compile Include="ViewModels\TabWeekViewModel.cs" />
     <Compile Include="ViewModels\WeatherTabsViewModel.cs" />

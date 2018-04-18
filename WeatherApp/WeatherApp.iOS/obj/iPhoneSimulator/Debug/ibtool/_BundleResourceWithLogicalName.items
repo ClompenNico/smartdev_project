@@ -5,8 +5,12 @@
       <LogicalName>LaunchScreen.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool-link\Main.storyboardc\13181-view-13182.nib">
-      <LogicalName>Main.storyboardc/13181-view-13182.nib</LogicalName>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool-link\Main.storyboardc\18984-view-18985.nib">
+      <LogicalName>Main.storyboardc/18984-view-18985.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool-link\Main.storyboardc\23816-view-23817.nib">
+      <LogicalName>Main.storyboardc/23816-view-23817.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool-link\Main.storyboardc\240-view-241.nib">
@@ -19,6 +23,10 @@
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool-link\Main.storyboardc\Info.plist">
       <LogicalName>Main.storyboardc/Info.plist</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool-link\Main.storyboardc\NotificationsView.nib">
+      <LogicalName>Main.storyboardc/NotificationsView.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool-link\Main.storyboardc\TabDetailsView.nib">

@@ -59,9 +59,17 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="btnNotification.cs" />
+    <Compile Include="btnNotification.designer.cs">
+      <DependentUpon>btnNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Converters\StringToImageConverter.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Views\NotificationsView.cs" />
+    <Compile Include="Views\NotificationsView.designer.cs">
+      <DependentUpon>NotificationsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\TabWeekView.cs" />
     <Compile Include="Views\TabWeekView.designer.cs">
       <DependentUpon>TabWeekView.cs</DependentUpon>

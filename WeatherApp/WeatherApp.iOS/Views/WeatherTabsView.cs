@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using System;
@@ -29,6 +30,13 @@ namespace WeatherApp.iOS
 
             base.ViewDidLoad();
 
+            NavigationItem.RightBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Compose);
+
+            MvxFluentBindingDescriptionSet<WeatherTabsView, WeatherTabsViewModel> set = this.CreateBindingSet<WeatherTabsView, WeatherTabsViewModel>();
+
+            set.Bind(NavigationItem.RightBarButtonItem).To(vm => vm.NotificationsCommand);
+            set.Apply();
+
             //tabs aanmaken
             CreateTabs();
         }
@@ -40,7 +48,7 @@ namespace WeatherApp.iOS
             {
                 CreateSingleTab("Weather", "Images/weather.png", ViewModel.WeatherVM),
                 CreateSingleTab("Details", "Images/details.png", ViewModel.TabDetailsVM),
-                CreateSingleTab("Week", "Images/week.png", ViewModel.TabWeekVM),
+                //CreateSingleTab("Week", "Images/week.png", ViewModel.TabWeekVM),
             };
 
             ViewControllers = viewControllers;

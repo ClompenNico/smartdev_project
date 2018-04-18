@@ -21,5 +21,8 @@ namespace WeatherApp.Core.Models
 
         [JsonProperty(PropertyName = "minutely")]
         public Minutely Minutely { get; set; }
+
+        //[JsonProperty(PropertyName = "daily")]
+        //public Daily Daily { get; set; }
     }
 }

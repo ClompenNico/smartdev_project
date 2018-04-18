@@ -230,22 +230,50 @@
             </objects>
             <point key="canvasLocation" x="7" y="845"/>
         </scene>
-        <scene sceneID="13180">
+        <scene sceneID="18983">
             <objects>
-                <viewController id="13181" sceneMemberID="viewController" customClass="TabWeekView" storyboardIdentifier="TabWeekView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                <viewController id="18984" sceneMemberID="viewController" customClass="TabWeekView" storyboardIdentifier="TabWeekView" useStoryboardIdentifierAsRestorationIdentifier="YES">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="13178"/>
-                        <viewControllerLayoutGuide type="bottom" id="13179"/>
+                        <viewControllerLayoutGuide type="top" id="18981"/>
+                        <viewControllerLayoutGuide type="bottom" id="18982"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="13182">
+                    <view key="view" contentMode="scaleToFill" id="18985">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.19215686274509805" green="0.34901960784313724" blue="0.36862745098039218" alpha="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="13183" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18986" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549" y="435"/>
+            <point key="canvasLocation" x="575" y="429"/>
+        </scene>
+        <scene sceneID="23815">
+            <objects>
+                <viewController id="23816" sceneMemberID="viewController" customClass="NotificationsView" storyboardIdentifier="NotificationsView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="23813"/>
+                        <viewControllerLayoutGuide type="bottom" id="23814"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="23817">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="30256" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="btnNotification">
+                                <rect key="frame" x="184" y="353" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Notify"/>
+                                <connections>
+                                    <action selector="BtnNotification30256_TouchUpInside:" destination="23816" id="30273" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23818" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="426"/>
         </scene>
     </scenes>
     <resources>
