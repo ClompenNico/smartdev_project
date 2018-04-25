@@ -32,9 +32,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
+
+  <key>NSLocationUsageDescription</key>
 	<string>Location Services will be used to share your location while using the application.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location Services will be used to share your location while using the application.</string>
+  
 </dict>
 </plist>

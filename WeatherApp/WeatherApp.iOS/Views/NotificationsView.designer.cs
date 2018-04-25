@@ -14,12 +14,42 @@ namespace WeatherApp.iOS
     [Register ("NotificationsView")]
     partial class NotificationsView
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISwitch btnToggleDaily { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblDailySummary { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblValue { get; set; }
+
         [Action ("BtnNotification30256_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnNotification30256_TouchUpInside (WeatherApp.iOS.btnNotification sender);
 
+        [Action ("MyToggleValueChanged:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void MyToggleValueChanged (UIKit.UISwitch sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (btnToggleDaily != null) {
+                btnToggleDaily.Dispose ();
+                btnToggleDaily = null;
+            }
+
+            if (lblDailySummary != null) {
+                lblDailySummary.Dispose ();
+                lblDailySummary = null;
+            }
+
+            if (lblValue != null) {
+                lblValue.Dispose ();
+                lblValue = null;
+            }
         }
     }
 }

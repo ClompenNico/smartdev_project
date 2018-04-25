@@ -28,7 +28,7 @@ namespace WeatherApp.Core
 
             Mvx.LazyConstructAndRegisterSingleton<IMvxMessenger, MvxMessengerHub>();
             RegisterNavigationServiceAppStart<WeatherTabsViewModel>();
-            Mvx.LazyConstructAndRegisterSingleton<ILocationService, LocationService>();
+            Mvx.ConstructAndRegisterSingleton<ILocationService, LocationService>();
 
         }
     }

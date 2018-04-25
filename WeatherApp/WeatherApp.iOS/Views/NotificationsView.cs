@@ -2,6 +2,7 @@
 using MvvmCross.iOS.Views;
 using System;
 using UIKit;
+using WeatherApp.Core.Models;
 using WeatherApp.Core.ViewModels;
 
 namespace WeatherApp.iOS
@@ -43,6 +44,14 @@ namespace WeatherApp.iOS
             throw new NotImplementedException();
         }
         */
+
+        partial void MyToggleValueChanged(UISwitch sender)
+        {
+            GlobalVariables.ToggleDailyValue = btnToggleDaily.On;
+
+            lblValue.Text = GlobalVariables.ToggleDailyValue.ToString();
+        }
+
         partial void BtnNotification30256_TouchUpInside(btnNotification sender)
         {
             /*

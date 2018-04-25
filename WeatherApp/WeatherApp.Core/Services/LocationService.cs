@@ -26,7 +26,8 @@ namespace WeatherApp.Core.Services
         {
             var message = new LocationMessage(this,
                                                 location.Coordinates.Latitude,
-                                                location.Coordinates.Longitude);
+                                                location.Coordinates.Longitude
+                                                /*10.232, 8.4545*/);
 
             _messenger.Publish(message);
         }

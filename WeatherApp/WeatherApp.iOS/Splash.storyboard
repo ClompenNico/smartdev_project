@@ -60,5 +60,6 @@
         <image name="Images/weather.png" width="30" height="30"/>
         <image name="Images/week.png" width="30" height="30"/>
         <image name="Iconv3.png" width="500" height="500"/>
+        <image name="Icon.png" width="500" height="500"/>
     </resources>
 </document>
