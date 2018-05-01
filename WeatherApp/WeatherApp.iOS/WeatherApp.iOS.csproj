@@ -89,6 +89,19 @@
     <Compile Include="Views\WeatherTabsView.designer.cs">
       <DependentUpon>WeatherTabsView.cs</DependentUpon>
     </Compile>
+    <BundleResource Include="Resources\Backgrounds\SunriseDefault.png" />
+    <BundleResource Include="Resources\Backgrounds\Sunrise667.png" />
+    <BundleResource Include="Resources\Backgrounds\Sunrise568.png" />
+    <BundleResource Include="Resources\Images\Currently\partly-cloudy-day.png" />
+    <BundleResource Include="Resources\Images\Currently\partly-cloudy-night.png" />
+    <BundleResource Include="Resources\Images\Currently\rain.png" />
+    <BundleResource Include="Resources\Images\Currently\sleet.png" />
+    <BundleResource Include="Resources\Images\Currently\snow.png" />
+    <BundleResource Include="Resources\Images\Currently\wind.png" />
+    <BundleResource Include="Resources\Images\Currently\clear-day.png" />
+    <BundleResource Include="Resources\Images\Currently\clear-night.png" />
+    <BundleResource Include="Resources\Images\Currently\cloudy.png" />
+    <BundleResource Include="Resources\Images\Currently\fog.png" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -96,6 +109,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <InterfaceDefinition Include="Splash.storyboard" />
+    <BundleResource Include="Resources\Backgrounds\Sunrise736.png" />
+    <BundleResource Include="Resources\Backgrounds\Sunrise812.png" />
     <Content Include="Resources\Icon.png" />
     <Content Include="Resources\Iconv3%402.png" />
     <Content Include="Resources\Iconv3%403.png" />
@@ -156,16 +171,6 @@
     <BundleResource Include="Resources\Images\Details\Visibility.png" />
     <BundleResource Include="Resources\Images\Details\ApparentTemperature.png" />
     <BundleResource Include="Resources\Images\Details\DewPoint.png" />
-    <BundleResource Include="Resources\Images\Currently\clear-day.png" />
-    <BundleResource Include="Resources\Images\Currently\clear-night.png" />
-    <BundleResource Include="Resources\Images\Currently\cloudy.png" />
-    <BundleResource Include="Resources\Images\Currently\fog.png" />
-    <BundleResource Include="Resources\Images\Currently\partly-cloudy-day.png" />
-    <BundleResource Include="Resources\Images\Currently\partly-cloudy-night.png" />
-    <BundleResource Include="Resources\Images\Currently\rain.png" />
-    <BundleResource Include="Resources\Images\Currently\sleet.png" />
-    <BundleResource Include="Resources\Images\Currently\snow.png" />
-    <BundleResource Include="Resources\Images\Currently\wind.png" />
     <BundleResource Include="Resources\Images\week.png" />
     <BundleResource Include="Resources\Images\details.png" />
     <Content Include="Resources\Iconv3.png" />

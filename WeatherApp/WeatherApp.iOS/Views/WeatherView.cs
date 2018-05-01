@@ -15,6 +15,22 @@ namespace WeatherApp.iOS
         {
         }
 
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            if (UIScreen.MainScreen.Bounds.Height <= 568)
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise568.png"));
+            else if (UIScreen.MainScreen.Bounds.Height <= 671)
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise667.png"));
+            else if (UIScreen.MainScreen.Bounds.Height <= 740)
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise736.png"));
+            else if (UIScreen.MainScreen.Bounds.Height <= 816)
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise812.png"));
+            else
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/SunriseDefault.png"));
+
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();

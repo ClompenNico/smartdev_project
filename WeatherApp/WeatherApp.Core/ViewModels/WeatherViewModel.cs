@@ -17,6 +17,7 @@ namespace WeatherApp.Core.ViewModels
         double _LONGITUDE;
         private readonly IMvxMessenger _messenger;
         private readonly MvxSubscriptionToken _token;
+
         protected readonly IWeatherService _weatherService;
         public WeatherViewModel(IWeatherService weatherService, IMvxMessenger messenger)
         {

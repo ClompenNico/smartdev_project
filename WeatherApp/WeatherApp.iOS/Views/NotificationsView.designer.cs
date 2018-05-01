@@ -24,6 +24,10 @@ namespace WeatherApp.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblFileValue { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblValue { get; set; }
 
         [Action ("BtnNotification30256_TouchUpInside:")]
@@ -44,6 +48,11 @@ namespace WeatherApp.iOS
             if (lblDailySummary != null) {
                 lblDailySummary.Dispose ();
                 lblDailySummary = null;
+            }
+
+            if (lblFileValue != null) {
+                lblFileValue.Dispose ();
+                lblFileValue = null;
             }
 
             if (lblValue != null) {

@@ -2,65 +2,53 @@
 using MvvmCross.Plugins.File;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using WeatherApp.Core.Models;
+using WeatherApp.Core.Services;
 
 namespace WeatherApp.Core.ViewModels
 {
     public class NotificationsViewModel : MvxViewModel
     {
+        protected readonly INotificationService _notificationService;
+
         /*
         private IMvxFileStore _fileStore;
-        private string _folderName;
-        private string _fileName;
-        private string Tekst;
+        private string _folderName = "Notifications";
+        private string _fileName = "DailySummary";
+        private string Tekst = GlobalVariables.ToggleDailyValue.ToString();
         */
 
-        public NotificationsViewModel(/*IMvxFileStore fileStore*/)
+        public NotificationsViewModel(/*IMvxFileStore fileStore, INotificationService notificationService*/)
         {
-            /*
-            _fileStore = fileStore;
+            GlobalVariables.FileValue = "True";
 
+            //_notificationService = notificationService;
+
+            //NotificationService.ReadFromFile();
+
+            //_fileStore = fileStore;
+
+            //GlobalVariables.FileValue = "True";//NotificationService.ReadFromFile();
+
+            /*
             if (GlobalVariables.ToggleDailyValue == true)
             {
-                string vs = "super";
+                GlobalVariables.FileValue = NotificationService.ReadFromFile();
             }
             */
         }
 
-        //HIER KAN JE DE WAARDE PROBEREN OPSLAAN VOOR MOCHT DE APP AFGESLOTEN ZIJN :)
-
-        /*
-        private void SaveToFile()
+        public ICommand ToggleDailyCommand
         {
-            try
+            get
             {
-                if (!_fileStore.FolderExists(_folderName))
-                    _fileStore.EnsureFolderExists(_folderName);
-
-                _fileStore.WriteFile(_folderName + "/" + _fileName, Tekst);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                return new MvxCommand(() => NotificationService.SaveToFile());
             }
         }
-
-        private void ReadFromFile()
-        {
-            try
-            {
-                string contents = string.Empty;
-                _fileStore.TryReadTextFile(_folderName + "/" + _fileName, out Tekst);
-                Tekst = contents;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        */
     }
 }

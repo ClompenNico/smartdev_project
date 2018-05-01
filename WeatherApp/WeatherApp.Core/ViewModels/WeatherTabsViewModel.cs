@@ -1,11 +1,13 @@
 ﻿using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using MvvmCross.Plugins.Messenger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherApp.Core.Messages;
 using WeatherApp.Core.Models;
 using WeatherApp.Core.Services;
 
@@ -23,7 +25,10 @@ namespace WeatherApp.Core.ViewModels
                 RaisePropertyChanged(() => Weather);
             }
         }
-
+        
+        //Luisteren naar het bericht met de locatie
+        private readonly IMvxMessenger _messenger;
+        private readonly MvxSubscriptionToken _token;
 
         private readonly IMvxNavigationService _navigationService;
         protected readonly IWeatherService _weatherService;
@@ -37,13 +42,24 @@ namespace WeatherApp.Core.ViewModels
         public TabDetailsViewModel TabDetailsVM => _tabDetailsViewModel.Value;
         public TabWeekViewModel TabWeekVM => _tabWeekTableViewModel.Value;
 
-        public WeatherTabsViewModel(IWeatherService weatherService, IMvxNavigationService navigationService)
+        
+
+        public WeatherTabsViewModel(IWeatherService weatherService, IMvxNavigationService navigationService, IMvxMessenger messenger)
         {
+            //Subcriben aan de locatiemessage
+            _messenger = messenger;
+            _token = messenger.Subscribe<LocationMessage>(OnLocationMessage);
+
+            //OnLocationMessage();
+
+            //Navigeren
             _navigationService = navigationService;
 
+            //Weer service
             this._weatherService = weatherService;
 
-            GetWeatherData();
+            //Data opvragen
+           
 
             //initialize lazy instance via ioc construct
             _weatherViewModel = new Lazy<WeatherViewModel>(Mvx.IocConstruct<WeatherViewModel>);
@@ -51,6 +67,13 @@ namespace WeatherApp.Core.ViewModels
             _tabWeekTableViewModel = new Lazy<TabWeekViewModel>(Mvx.IocConstruct<TabWeekViewModel>);
 
 
+        }
+
+        private void OnLocationMessage(LocationMessage message)
+        {
+            GlobalVariables._LATITUDE = message.Latitude;
+            GlobalVariables._LONGITUDE = message.Longitude;
+            GetWeatherData();
         }
 
         public async void GetWeatherData()

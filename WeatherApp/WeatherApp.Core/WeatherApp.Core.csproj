@@ -46,9 +46,12 @@
     <Compile Include="Repositories\IWeatherRepository.cs" />
     <Compile Include="Repositories\WeatherRepository.cs" />
     <Compile Include="Services\ILocationService.cs" />
+    <Compile Include="Services\INotificationService.cs" />
     <Compile Include="Services\IWeatherService.cs" />
     <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\WeatherService.cs" />
+    <Compile Include="Services\_TestService.cs" />
     <Compile Include="ViewModels\NotificationsViewModel.cs" />
     <Compile Include="ViewModels\TabDetailsViewModel.cs" />
     <Compile Include="ViewModels\TabWeekViewModel.cs" />
