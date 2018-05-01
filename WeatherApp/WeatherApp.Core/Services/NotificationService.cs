@@ -8,27 +8,39 @@ using WeatherApp.Core.Models;
 
 namespace WeatherApp.Core.Services
 {
-    public class NotificationService
+    public class NotificationService : INotificationService
     {
+        private static IMvxFileStore _fileStore;
+        private static string _folderName = "Files";
+        private static string _fileName = "DailySummary";
+        //private static string Tekst = GlobalVariables.ToggleDailyValue.ToString();
+        //private readonly GlobalVariables _globalVariables;
+
         public NotificationService(IMvxFileStore fileStore)
         {
             _fileStore = fileStore;
         }
 
-        private static IMvxFileStore _fileStore;
-        private static string _folderName = "Notification";
-        private static string _fileName = "DailySummary";
-        private static string Tekst = GlobalVariables.ToggleDailyValue.ToString();
-        //private readonly GlobalVariables _globalVariables;
+        private GlobalVariables _globalVariables = new GlobalVariables();
+        public GlobalVariables globalVariables
+        {
+            get { return _globalVariables; }
+            set
+            {
+                _globalVariables = value;
+            }
+        }
 
-        public static void SaveToFile()
+        public static void SaveToFile(string Togglevalue)
         {
             try
             {
                 if (!_fileStore.FolderExists(_folderName))
                     _fileStore.EnsureFolderExists(_folderName);
 
-                _fileStore.WriteFile(_folderName + "/" + _fileName, Tekst);
+               // Tekst = Togglevalue;
+
+                _fileStore.WriteFile(_folderName + "/" + _fileName, Togglevalue);
             }
             catch (Exception ex)
             {

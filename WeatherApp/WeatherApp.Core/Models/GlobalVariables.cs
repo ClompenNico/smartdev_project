@@ -12,6 +12,13 @@ namespace WeatherApp.Core.Models
         public static double _LONGITUDE { get; set; }
         public static double _LATITUDE { get; set; }
         public static string FileValue { get; set; }
+
+        /*
+        public static string AlertTitle { get; set; }
+        public static string AlertAction { get; set; }
+        */
+
+        public static string AlertBody { get; set; }
     }
 
     //VERWIJDER EVENTUEEL ALS IK DEZE NIET GEBRUIK MEER (notificaties)

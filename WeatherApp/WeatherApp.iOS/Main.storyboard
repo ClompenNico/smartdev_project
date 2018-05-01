@@ -270,50 +270,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="30256" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="btnNotification">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="30256" translatesAutoresizingMaskIntoConstraints="NO" customClass="btnNotification">
                                 <rect key="frame" x="184" y="353" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Notify"/>
                                 <connections>
                                     <action selector="BtnNotification30256_TouchUpInside:" destination="23816" id="30273" eventType="touchUpInside"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="51481" firstItem="30256" firstAttribute="height" constant="30"/>
+                                    <constraint id="51482" firstItem="30256" firstAttribute="width" constant="46"/>
+                                </constraints>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="30584" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="20" y="86" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="30584" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="36" width="51" height="31"/>
                                 <connections>
                                     <action selector="MyToggleValueChanged:" destination="23816" id="30693" eventType="valueChanged"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30744" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="90" y="91" width="187" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30744" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="90" y="41" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17" weight="semibold"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="33930" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="238" y="91" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="33930" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="259" y="41" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deliver a notification at 7 am, with the forecast for the day." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="33939" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="2">
-                                <rect key="frame" x="20" y="125" width="374" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deliver a notification at 7 am, with the forecast for the day." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="33939" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2" misplaced="YES">
+                                <rect key="frame" x="20" y="75" width="374" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="34216" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="329" y="91" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="34216" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="329" y="41" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint id="50839" firstItem="30584" firstAttribute="top" secondItem="23813" secondAttribute="bottom" constant="16"/>
+                            <constraint id="50840" firstItem="30744" firstAttribute="centerY" secondItem="30584" secondAttribute="centerY"/>
+                            <constraint id="50841" firstItem="33930" firstAttribute="centerY" secondItem="30584" secondAttribute="centerY"/>
+                            <constraint id="50842" firstItem="34216" firstAttribute="centerY" secondItem="30584" secondAttribute="centerY"/>
+                            <constraint id="50843" firstItem="30584" firstAttribute="leading" secondItem="23817" secondAttribute="leadingMargin"/>
+                            <constraint id="50844" firstItem="30744" firstAttribute="leading" secondItem="23817" secondAttribute="leadingMargin" constant="70"/>
+                            <constraint id="50845" firstItem="23817" firstAttribute="trailingMargin" secondItem="34216" secondAttribute="trailing" constant="23"/>
+                            <constraint id="50847" firstItem="33939" firstAttribute="top" secondItem="30584" secondAttribute="bottom" constant="8"/>
+                            <constraint id="50848" firstItem="33939" firstAttribute="leading" secondItem="23817" secondAttribute="leadingMargin"/>
+                            <constraint id="50849" firstItem="33939" firstAttribute="trailing" secondItem="23817" secondAttribute="trailingMargin"/>
+                            <constraint id="51480" firstItem="23817" firstAttribute="trailingMargin" secondItem="33930" secondAttribute="trailing" constant="93"/>
+                            <constraint id="51483" firstItem="30256" firstAttribute="centerX" secondItem="23817" secondAttribute="centerX"/>
+                            <constraint id="51484" firstItem="30256" firstAttribute="centerY" secondItem="23817" secondAttribute="centerY"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btnToggleDaily" destination="30584" id="name-outlet-30584"/>

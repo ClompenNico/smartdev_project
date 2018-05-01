@@ -28,7 +28,6 @@ namespace WeatherApp.iOS
                 this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise812.png"));
             else
                 this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/SunriseDefault.png"));
-
         }
 
         public override void ViewDidLoad()

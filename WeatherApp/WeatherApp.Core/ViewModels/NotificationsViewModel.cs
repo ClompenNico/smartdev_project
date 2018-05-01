@@ -14,18 +14,11 @@ namespace WeatherApp.Core.ViewModels
 {
     public class NotificationsViewModel : MvxViewModel
     {
-        protected readonly INotificationService _notificationService;
+        //protected readonly INotificationService _notificationService;
 
-        /*
-        private IMvxFileStore _fileStore;
-        private string _folderName = "Notifications";
-        private string _fileName = "DailySummary";
-        private string Tekst = GlobalVariables.ToggleDailyValue.ToString();
-        */
-
-        public NotificationsViewModel(/*IMvxFileStore fileStore, INotificationService notificationService*/)
+        public NotificationsViewModel()
         {
-            GlobalVariables.FileValue = "True";
+            //GlobalVariables.FileValue = "True";
 
             //_notificationService = notificationService;
 
@@ -47,7 +40,7 @@ namespace WeatherApp.Core.ViewModels
         {
             get
             {
-                return new MvxCommand(() => NotificationService.SaveToFile());
+                return new MvxCommand(() => NotificationService.SaveToFile(GlobalVariables.FileValue.ToString()));
             }
         }
     }
