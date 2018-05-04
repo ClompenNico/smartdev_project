@@ -69,13 +69,14 @@
     <Compile Include="Converters\StringToImageConverter.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="TableViewSources\WeekTableViewSource.cs" />
+    <Compile Include="Views\TabWeekTableView.cs" />
+    <Compile Include="Views\TabWeekTableView.designer.cs">
+      <DependentUpon>TabWeekTableView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NotificationsView.cs" />
     <Compile Include="Views\NotificationsView.designer.cs">
       <DependentUpon>NotificationsView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TabWeekView.cs" />
-    <Compile Include="Views\TabWeekView.designer.cs">
-      <DependentUpon>TabWeekView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TabDetailsView.cs" />
     <Compile Include="Views\TabDetailsView.designer.cs">
@@ -89,9 +90,9 @@
     <Compile Include="Views\WeatherTabsView.designer.cs">
       <DependentUpon>WeatherTabsView.cs</DependentUpon>
     </Compile>
-    <BundleResource Include="Resources\Backgrounds\SunriseDefault.png" />
-    <BundleResource Include="Resources\Backgrounds\Sunrise667.png" />
-    <BundleResource Include="Resources\Backgrounds\Sunrise568.png" />
+    <BundleResource Include="Resources\Backgrounds\DayDefault.png" />
+    <BundleResource Include="Resources\Backgrounds\Day667.png" />
+    <BundleResource Include="Resources\Backgrounds\Day568.png" />
     <BundleResource Include="Resources\Images\Currently\partly-cloudy-day.png" />
     <BundleResource Include="Resources\Images\Currently\partly-cloudy-night.png" />
     <BundleResource Include="Resources\Images\Currently\rain.png" />
@@ -102,6 +103,10 @@
     <BundleResource Include="Resources\Images\Currently\clear-night.png" />
     <BundleResource Include="Resources\Images\Currently\cloudy.png" />
     <BundleResource Include="Resources\Images\Currently\fog.png" />
+    <Compile Include="Views\WeekTableCell.cs" />
+    <Compile Include="Views\WeekTableCell.designer.cs">
+      <DependentUpon>WeekTableCell.cs</DependentUpon>
+    </Compile>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -109,6 +114,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <InterfaceDefinition Include="Splash.storyboard" />
+    <BundleResource Include="Resources\Backgrounds\Day736.png" />
+    <BundleResource Include="Resources\Backgrounds\Day812.png" />
+    <BundleResource Include="Resources\Backgrounds\NightDefault.png" />
+    <BundleResource Include="Resources\Backgrounds\Night568.png" />
+    <BundleResource Include="Resources\Backgrounds\Night667.png" />
+    <BundleResource Include="Resources\Backgrounds\Night736.png" />
+    <BundleResource Include="Resources\Backgrounds\Night812.png" />
+    <BundleResource Include="Resources\Backgrounds\SunriseDefault.png" />
+    <BundleResource Include="Resources\Backgrounds\Sunrise568.png" />
+    <BundleResource Include="Resources\Backgrounds\Sunrise667.png" />
     <BundleResource Include="Resources\Backgrounds\Sunrise736.png" />
     <BundleResource Include="Resources\Backgrounds\Sunrise812.png" />
     <Content Include="Resources\Icon.png" />

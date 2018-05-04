@@ -29,14 +29,12 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-
-  <key>NSLocationUsageDescription</key>
+	<key>NSLocationUsageDescription</key>
 	<string>Location Services will be used to share your location while using the application.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location Services will be used to share your location while using the application.</string>
-  
 </dict>
 </plist>

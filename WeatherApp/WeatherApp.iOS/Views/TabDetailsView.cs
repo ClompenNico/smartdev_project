@@ -29,5 +29,29 @@ namespace WeatherApp.iOS
 
             set.Apply();
         }
+
+        public override void ViewWillAppear(bool animated)
+        {
+            int currentTime = DateTime.Now.Hour;
+
+            base.ViewWillAppear(animated);
+
+            if (currentTime <= 6 || currentTime >= 21)
+            {
+                this.View.BackgroundColor = UIColor.FromRGB(27, 41, 54);
+            }
+            else if (currentTime <= 9 || currentTime >= 18 && currentTime <= 21)
+            {
+                this.View.BackgroundColor = UIColor.FromRGB(174, 111, 37);
+            }
+            else if (currentTime <= 18)
+            {
+                this.View.BackgroundColor = UIColor.FromRGB(49, 89, 94);
+            }
+            else
+            {
+                this.View.BackgroundColor = UIColor.FromRGB(49, 89, 94);
+            }
+        }
     }
 }

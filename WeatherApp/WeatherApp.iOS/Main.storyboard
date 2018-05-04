@@ -40,13 +40,13 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[summary]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3178" misplaced="YES">
                                 <rect key="frame" x="64" y="531" width="330" height="38"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <color key="highlightedColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[hour summary]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3680" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2" misplaced="YES">
                                 <rect key="frame" x="20" y="644" width="374" height="72"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                             </label>
@@ -112,115 +112,142 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.19215686274509805" green="0.34901960784313724" blue="0.36862745098039218" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6689" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Images/Details/ApparentTemperature.png">
-                                <rect key="frame" x="101" y="234" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6689" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/ApparentTemperature.png" misplaced="YES">
+                                <rect key="frame" x="101" y="84" width="40" height="40"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6690" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Images/Details/Humidity.png">
-                                <rect key="frame" x="274" y="234" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6690" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/Humidity.png" misplaced="YES">
+                                <rect key="frame" x="274" y="84" width="40" height="40"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6691" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Images/Details/UVIndex.png">
-                                <rect key="frame" x="101" y="387" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6691" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/UVIndex.png" misplaced="YES">
+                                <rect key="frame" x="101" y="305" width="40" height="40"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6692" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Images/Details/Visibility.png">
-                                <rect key="frame" x="274" y="387" width="40" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6692" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/Visibility.png" misplaced="YES">
+                                <rect key="frame" x="274" y="305" width="40" height="42"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6697" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Images/Details/DewPoint.png">
-                                <rect key="frame" x="101" y="543" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6697" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/DewPoint.png" misplaced="YES">
+                                <rect key="frame" x="101" y="529" width="40" height="40"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6946" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Images/Details/Pressure.png">
-                                <rect key="frame" x="274" y="543" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6946" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/Pressure.png" misplaced="YES">
+                                <rect key="frame" x="274" y="529" width="40" height="40"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels Like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6947" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="74" y="282" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels Like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6947" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="74" y="132" width="93" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[T°c]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6949" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="75" y="303" width="90" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[T°c]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6949" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="75" y="153" width="90" height="45"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10393" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="247" y="282" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10393" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="247" y="132" width="93" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV Index" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10661" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="74" y="435" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV Index" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10661" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="74" y="353" width="93" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visibility" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10662" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="248" y="437" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visibility" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10662" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="248" y="355" width="93" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dew Point" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10663" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="72" y="591" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dew Point" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10663" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="72" y="577" width="93" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10664" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="248" y="591" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10664" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="248" y="577" width="93" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[km]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10665" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="250" y="456" width="90" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[km]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10665" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="250" y="374" width="90" height="45"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[T°c]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10666" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="74" y="620" width="90" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[T°c]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10666" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="74" y="606" width="90" height="45"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Bar]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10667" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="250" y="620" width="89" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Bar]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10667" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="250" y="606" width="89" height="45"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[H%]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10668" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="249" y="303" width="90" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[H%]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10668" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="249" y="153" width="90" height="45"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[UV]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10669" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
-                                <rect key="frame" x="76" y="456" width="90" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[UV]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10669" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" misplaced="YES">
+                                <rect key="frame" x="76" y="374" width="90" height="45"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint id="53964" firstItem="6690" firstAttribute="centerY" secondItem="6689" secondAttribute="centerY"/>
+                            <constraint id="53965" firstItem="3442" firstAttribute="trailingMargin" secondItem="6690" secondAttribute="trailing" constant="80"/>
+                            <constraint id="53966" firstItem="6689" firstAttribute="leading" secondItem="3442" secondAttribute="leadingMargin" constant="81"/>
+                            <constraint id="54302" firstItem="6947" firstAttribute="top" secondItem="6689" secondAttribute="bottom" constant="8"/>
+                            <constraint id="54303" firstItem="6949" firstAttribute="top" secondItem="6947" secondAttribute="bottom"/>
+                            <constraint id="54304" firstItem="10393" firstAttribute="top" secondItem="6690" secondAttribute="bottom" constant="8"/>
+                            <constraint id="54305" firstItem="10668" firstAttribute="top" secondItem="10393" secondAttribute="bottom"/>
+                            <constraint id="54719" firstItem="6689" firstAttribute="centerX" secondItem="6949" secondAttribute="centerX" constant="1"/>
+                            <constraint id="54720" firstItem="6947" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX"/>
+                            <constraint id="54721" firstItem="10393" firstAttribute="centerX" secondItem="6690" secondAttribute="centerX"/>
+                            <constraint id="54722" firstItem="10668" firstAttribute="centerX" secondItem="6690" secondAttribute="centerX"/>
+                            <constraint id="55074" firstItem="3442" firstAttribute="centerY" secondItem="10661" secondAttribute="centerY" constant="4"/>
+                            <constraint id="55075" firstItem="3442" firstAttribute="centerY" secondItem="10662" secondAttribute="centerY" constant="2"/>
+                            <constraint id="55076" firstItem="6691" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX"/>
+                            <constraint id="55077" firstItem="6692" firstAttribute="centerX" secondItem="6690" secondAttribute="centerX"/>
+                            <constraint id="55078" firstItem="10661" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX"/>
+                            <constraint id="55079" firstItem="10662" firstAttribute="centerX" secondItem="6690" secondAttribute="centerX"/>
+                            <constraint id="55080" firstItem="10665" firstAttribute="centerX" secondItem="6692" secondAttribute="centerX" constant="1"/>
+                            <constraint id="55081" firstItem="10669" firstAttribute="centerX" secondItem="6691" secondAttribute="centerX"/>
+                            <constraint id="55083" firstItem="10667" firstAttribute="centerY" secondItem="10666" secondAttribute="centerY"/>
+                            <constraint id="55084" firstItem="10666" firstAttribute="top" secondItem="10663" secondAttribute="bottom" constant="8"/>
+                            <constraint id="55085" firstItem="10667" firstAttribute="top" secondItem="10664" secondAttribute="bottom" constant="8"/>
+                            <constraint id="55086" firstItem="10663" firstAttribute="top" secondItem="6697" secondAttribute="bottom" constant="8"/>
+                            <constraint id="55087" firstItem="10664" firstAttribute="top" secondItem="6946" secondAttribute="bottom" constant="8"/>
+                            <constraint id="55473" firstItem="10663" firstAttribute="centerX" secondItem="10666" secondAttribute="centerX"/>
+                            <constraint id="55474" firstItem="6697" firstAttribute="centerX" secondItem="10666" secondAttribute="centerX" constant="2"/>
+                            <constraint id="55475" firstItem="10664" firstAttribute="centerX" secondItem="10667" secondAttribute="centerX"/>
+                            <constraint id="55476" firstItem="6946" firstAttribute="centerX" secondItem="10667" secondAttribute="centerX"/>
+                            <constraint id="55868" firstItem="6689" firstAttribute="centerX" secondItem="10666" secondAttribute="centerX" constant="2"/>
+                            <constraint id="56260" firstItem="10667" firstAttribute="centerX" secondItem="6690" secondAttribute="centerX"/>
+                            <constraint id="57045" firstItem="6691" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX"/>
+                            <constraint id="57046" firstItem="10669" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX"/>
+                            <constraint id="57047" firstItem="6692" firstAttribute="centerX" secondItem="6690" secondAttribute="centerX"/>
+                            <constraint id="57048" firstItem="10665" firstAttribute="centerX" secondItem="6690" secondAttribute="centerX" constant="1"/>
+                            <constraint id="57448" firstItem="10662" firstAttribute="top" secondItem="6692" secondAttribute="bottom" constant="8"/>
+                            <constraint id="57450" firstItem="10662" firstAttribute="bottom" secondItem="10665" secondAttribute="top" constant="2"/>
+                            <constraint id="57451" firstItem="10662" firstAttribute="bottom" secondItem="10665" secondAttribute="top" constant="2"/>
+                            <constraint id="57452" firstItem="10662" firstAttribute="top" secondItem="6692" secondAttribute="bottom" constant="8"/>
+                            <constraint id="57453" firstItem="10661" firstAttribute="top" secondItem="6691" secondAttribute="bottom" constant="8"/>
+                            <constraint id="57454" firstItem="10669" firstAttribute="top" secondItem="10661" secondAttribute="bottom"/>
+                            <constraint id="57455" firstItem="10662" firstAttribute="bottom" secondItem="10665" secondAttribute="top" constant="2"/>
+                            <constraint id="59110" firstItem="6689" firstAttribute="top" secondItem="3438" secondAttribute="bottom" constant="64"/>
+                            <constraint id="59111" firstItem="3439" firstAttribute="top" secondItem="10666" secondAttribute="bottom" constant="85"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imgApparentTemp" destination="6689" id="name-outlet-6689"/>
@@ -240,23 +267,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3443" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7" y="845"/>
-        </scene>
-        <scene sceneID="18983">
-            <objects>
-                <viewController id="18984" sceneMemberID="viewController" customClass="TabWeekView" storyboardIdentifier="TabWeekView" useStoryboardIdentifierAsRestorationIdentifier="YES">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="18981"/>
-                        <viewControllerLayoutGuide type="bottom" id="18982"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="18985">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="18986" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="575" y="429"/>
         </scene>
         <scene sceneID="23815">
             <objects>
@@ -339,6 +349,74 @@
             </objects>
             <point key="canvasLocation" x="1153" y="426"/>
         </scene>
+        <scene sceneID="51836">
+            <objects>
+                <tableViewController id="51837" sceneMemberID="viewController" customClass="TabWeekTableView" storyboardIdentifier="TabWeekTableView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="51838">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="51841" customClass="WeekTableCell" restorationIdentifier="WeekCell" reuseIdentifier="WeekCell" rowHeight="80">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51841" id="51842">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Day]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="59953" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="20" y="8" width="182" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24" weight="heavy"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="59954" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2" text="[Summary]" misplaced="YES" ambiguous="YES">
+                                            <rect key="frame" x="20" y="43" width="306" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="59955" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                                            <rect key="frame" x="364" y="8" width="30" height="30"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[T°c]" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="59956" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                                            <rect key="frame" x="344" y="47" width="50" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20" weight="semibold"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="61001" firstItem="59953" firstAttribute="leading" secondItem="51842" secondAttribute="leading" constant="20"/>
+                                        <constraint id="61002" firstItem="59954" firstAttribute="leading" secondItem="59953" secondAttribute="leading"/>
+                                        <constraint id="61003" firstItem="59953" firstAttribute="top" secondItem="51842" secondAttribute="top" constant="8"/>
+                                        <constraint id="61004" firstItem="59954" firstAttribute="top" secondItem="59953" secondAttribute="bottom" constant="8"/>
+                                        <constraint id="61005" firstItem="59955" firstAttribute="top" secondItem="51842" secondAttribute="top" constant="8"/>
+                                        <constraint id="61006" firstItem="51842" firstAttribute="trailing" secondItem="59955" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="61007" firstItem="59956" firstAttribute="trailing" secondItem="59955" secondAttribute="trailing"/>
+                                        <constraint id="61008" firstItem="59956" firstAttribute="top" secondItem="59955" secondAttribute="bottom" constant="9"/>
+                                        <constraint id="61886" firstItem="59956" firstAttribute="leading" secondItem="59954" secondAttribute="trailing" constant="18"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.19215686274509805" green="0.34901960784313724" blue="0.36862745098039218" alpha="1"/>
+                                <connections>
+                                    <outlet property="lblDag" destination="59953" id="name-outlet-59953"/>
+                                    <outlet property="lblSummary" destination="59954" id="name-outlet-59954"/>
+                                    <outlet property="lblTemperatuur" destination="59956" id="name-outlet-59956"/>
+                                    <outlet property="imgIcon" destination="59955" id="name-outlet-59955"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="51837" id="51839"/>
+                            <outlet property="delegate" destination="51837" id="51840"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51843" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="427"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Images/weather.png" width="30" height="30"/>
@@ -361,11 +439,21 @@
         <image name="Images/details.png" width="30" height="30"/>
         <image name="Iconv3.png" width="500" height="500"/>
         <image name="Icon.png" width="500" height="500"/>
+        <image name="Images/Currently/clear-night.png" width="30" height="30"/>
+        <image name="Backgrounds/Day568.png" width="320" height="568"/>
+        <image name="Backgrounds/Day667.png" width="375" height="667"/>
+        <image name="Backgrounds/Day736.png" width="414" height="736"/>
+        <image name="Backgrounds/Day812.png" width="375" height="812"/>
+        <image name="Backgrounds/DayDefault.png" width="750" height="1334"/>
+        <image name="Backgrounds/Night568.png" width="320" height="568"/>
+        <image name="Backgrounds/Night667.png" width="375" height="667"/>
+        <image name="Backgrounds/Night736.png" width="414" height="736"/>
+        <image name="Backgrounds/Night812.png" width="375" height="812"/>
         <image name="Backgrounds/Sunrise568.png" width="320" height="568"/>
         <image name="Backgrounds/Sunrise667.png" width="375" height="667"/>
-        <image name="Backgrounds/SunriseDefault.png" width="750" height="1334"/>
-        <image name="Images/Currently/clear-night.png" width="30" height="30"/>
         <image name="Backgrounds/Sunrise736.png" width="414" height="736"/>
         <image name="Backgrounds/Sunrise812.png" width="375" height="812"/>
+        <image name="Backgrounds/NightDefault.png" width="750" height="1334"/>
+        <image name="Backgrounds/SunriseDefault.png" width="750" height="1334"/>
     </resources>
 </document>

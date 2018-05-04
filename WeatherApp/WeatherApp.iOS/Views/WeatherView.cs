@@ -17,17 +17,55 @@ namespace WeatherApp.iOS
 
         public override void ViewWillAppear(bool animated)
         {
+            int currentTime = DateTime.Now.Hour;
+
             base.ViewWillAppear(animated);
-            if (UIScreen.MainScreen.Bounds.Height <= 568)
-                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise568.png"));
-            else if (UIScreen.MainScreen.Bounds.Height <= 671)
-                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise667.png"));
-            else if (UIScreen.MainScreen.Bounds.Height <= 740)
-                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise736.png"));
-            else if (UIScreen.MainScreen.Bounds.Height <= 816)
-                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/Sunrise812.png"));
+
+            //string locatie = "Day";
+
+            //LoadBackground(locatie);
+
+            if (currentTime <= 6 || currentTime >= 21)
+            {
+                string locatie = "Night";
+                LoadBackground(locatie);
+            }
+            else if (currentTime <= 9 || currentTime >= 18 && currentTime <= 21)
+            {
+                string locatie = "Sunrise";
+                LoadBackground(locatie);
+            }
+            else if (currentTime <= 18)
+            {
+                string locatie = "Day";
+                LoadBackground(locatie);
+            }
             else
-                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/SunriseDefault.png"));
+            {
+                string locatie = "Day";
+                Console.WriteLine("Dikke rip");
+                LoadBackground(locatie);
+            }
+
+            //sunrisecolor
+            //ae6f25
+            //1b2936
+
+
+        }
+
+        public void LoadBackground(string locatie)
+        {
+            if (UIScreen.MainScreen.Bounds.Height <= 568)
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/" + locatie + "568.png"));
+            else if (UIScreen.MainScreen.Bounds.Height <= 671)
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/" + locatie + "667.png"));
+            else if (UIScreen.MainScreen.Bounds.Height <= 740)
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/" + locatie + "736.png"));
+            else if (UIScreen.MainScreen.Bounds.Height <= 816)
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/" + locatie + "812.png"));
+            else
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/" + locatie + "Default.png"));
         }
 
         public override void ViewDidLoad()
@@ -40,7 +78,7 @@ namespace WeatherApp.iOS
 
             set.Bind(lblTemperature).To(vm => vm.Weather.Currently.Temp);
             set.Bind(lblSummary).To(vm => vm.Weather.Currently.Summary);
-            set.Bind(lblHourSummary).To(vm => vm.Weather.Minutely.Summary);
+            set.Bind(lblHourSummary).To(vm => vm.Weather._Hourly.Summary);
 
             set.Bind(lblLatitude).To(vm => vm.Weather.Latitude);
             set.Bind(lblLongitude).To(vm => vm.Weather.Longitude);

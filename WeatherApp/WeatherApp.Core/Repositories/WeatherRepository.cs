@@ -18,30 +18,18 @@ namespace WeatherApp.Core.Repositories
         //double _LONGITUDE = 0;      //private const        -122.4233      3.2718397999999524
         string _PARAMETER = "units=auto";
 
-        /*
-        private readonly IMvxMessenger _messenger;
-        private readonly MvxSubscriptionToken _token;
-
-        
-        public WeatherRepository(IMvxMessenger messenger)
-        {
-            _messenger = messenger;
-            _token = messenger.Subscribe<LocationMessage>(OnLocationMessage);
-        }
-        
-
-        
-        private void OnLocationMessage(LocationMessage message)
-        {
-            GlobalVariables._LATITUDE = message.Latitude;
-            GlobalVariables._LONGITUDE = message.Longitude;
-        }
-        */
-
         public Task<Weather>GetWeather()
         {
             string url = String.Format("{0}{1}/{2},{3}?{4}", _BASEURL, _API_KEY, GlobalVariables._LATITUDE, GlobalVariables._LONGITUDE, _PARAMETER);
             return GetAsync<Weather>(url);
+        }
+
+        public async Task<List<Weather.Daily.DailyDatas>>GetDailyDatas()
+        {
+            string url = String.Format("{0}{1}/{2},{3}?{4}", _BASEURL, _API_KEY, GlobalVariables._LATITUDE, GlobalVariables._LONGITUDE, _PARAMETER);
+            List<Weather.Daily.DailyDatas> dailyDatas = (await GetAsync<Weather>(url))._Daily.dailyDatas;
+            return dailyDatas;
+            //return GetAsync<List<Daily.DailyDatas>>(url);
         }
 
     }

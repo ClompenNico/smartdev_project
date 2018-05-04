@@ -11,6 +11,7 @@ namespace WeatherApp.Core.Services
     public class WeatherService : IWeatherService
     {
         private static Weather _weather = new Weather();
+        private static List<Weather.Daily.DailyDatas> _dailyDatas = new List<Weather.Daily.DailyDatas>();
         private readonly IWeatherRepository _weatherRepository;
 
         public WeatherService(IWeatherRepository weatherRepository)
@@ -21,6 +22,11 @@ namespace WeatherApp.Core.Services
         public async Task<Weather> GetWeather()
         {
             return await _weatherRepository.GetWeather();
+        }
+
+        public async Task<List<Weather.Daily.DailyDatas>> GetDailyDatas()
+        {
+            return await _weatherRepository.GetDailyDatas();
         }
     }
 }

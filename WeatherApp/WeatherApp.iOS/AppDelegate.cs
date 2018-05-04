@@ -170,7 +170,7 @@ namespace WeatherApp.iOS
                 Console.WriteLine(Go);
                 Console.WriteLine("WACHTEN OP UUR");
 
-                if (GlobalVariables.ToggleDailyValue == true && curTime == "22:34" /*DateTime.Today.Hour == 18 && DateTime.Today.Minute == 50*/)
+                if (GlobalVariables.ToggleDailyValue == true && curTime == "07:00" /*DateTime.Today.Hour == 18 && DateTime.Today.Minute == 50*/)
                 {
                     Go = false;
 

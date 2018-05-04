@@ -36,11 +36,8 @@
     <Compile Include="App.cs" />
     <Compile Include="Messages\LocationMessage.cs" />
     <Compile Include="Models\Currently.cs" />
-    <Compile Include="Models\Daily.cs" />
-    <Compile Include="Models\DailyData.cs" />
     <Compile Include="Models\GlobalVariables.cs" />
     <Compile Include="Models\Minutely.cs" />
-    <Compile Include="Models\MvxIosFileStore.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
@@ -55,6 +52,7 @@
     <Compile Include="Services\_TestService.cs" />
     <Compile Include="ViewModels\NotificationsViewModel.cs" />
     <Compile Include="ViewModels\TabDetailsViewModel.cs" />
+    <Compile Include="ViewModels\TabWeekTableViewModel.cs" />
     <Compile Include="ViewModels\TabWeekViewModel.cs" />
     <Compile Include="ViewModels\WeatherTabsViewModel.cs" />
     <Compile Include="ViewModels\WeatherViewModel.cs" />

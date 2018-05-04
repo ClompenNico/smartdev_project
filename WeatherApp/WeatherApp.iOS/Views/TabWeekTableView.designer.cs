@@ -11,8 +11,8 @@ using UIKit;
 
 namespace WeatherApp.iOS
 {
-    [Register ("TabWeekView")]
-    partial class TabWeekView
+    [Register ("TabWeekTableView")]
+    partial class TabWeekTableView
     {
         void ReleaseDesignerOutlets ()
         {

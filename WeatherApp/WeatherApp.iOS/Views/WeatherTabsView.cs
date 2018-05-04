@@ -48,7 +48,7 @@ namespace WeatherApp.iOS
             {
                 CreateSingleTab("Weather", "Images/weather.png", ViewModel.WeatherVM),
                 CreateSingleTab("Details", "Images/details.png", ViewModel.TabDetailsVM),
-                //CreateSingleTab("Week", "Images/week.png", ViewModel.TabWeekVM),
+                CreateSingleTab("Week", "Images/week.png", ViewModel.TabWeekVM),
             };
 
             ViewControllers = viewControllers;

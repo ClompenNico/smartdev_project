@@ -25,7 +25,18 @@ namespace WeatherApp.Core.ViewModels
                 RaisePropertyChanged(() => Weather);
             }
         }
-        
+
+        private List<Weather.Daily.DailyDatas> _dailyDataList;
+        public List<Weather.Daily.DailyDatas> DailyDataList
+        {
+            get { return _dailyDataList; }
+            set
+            {
+                _dailyDataList = value;
+                RaisePropertyChanged(() => DailyDataList);
+            }
+        }
+
         //Luisteren naar het bericht met de locatie
         private readonly IMvxMessenger _messenger;
         private readonly MvxSubscriptionToken _token;
@@ -35,12 +46,12 @@ namespace WeatherApp.Core.ViewModels
         //create a lazy instance for each viewmodel of the tabs in the tabview
         private readonly Lazy<WeatherViewModel> _weatherViewModel;
         private readonly Lazy<TabDetailsViewModel> _tabDetailsViewModel;
-        private readonly Lazy<TabWeekViewModel> _tabWeekTableViewModel;
+        private readonly Lazy<TabWeekTableViewModel> _tabWeekTableViewModel;
 
         //property to access value of the lazy instance
         public WeatherViewModel WeatherVM => _weatherViewModel.Value;
         public TabDetailsViewModel TabDetailsVM => _tabDetailsViewModel.Value;
-        public TabWeekViewModel TabWeekVM => _tabWeekTableViewModel.Value;
+        public TabWeekTableViewModel TabWeekVM => _tabWeekTableViewModel.Value;
 
         
 
@@ -64,7 +75,7 @@ namespace WeatherApp.Core.ViewModels
             //initialize lazy instance via ioc construct
             _weatherViewModel = new Lazy<WeatherViewModel>(Mvx.IocConstruct<WeatherViewModel>);
             _tabDetailsViewModel = new Lazy<TabDetailsViewModel>(Mvx.IocConstruct<TabDetailsViewModel>);
-            _tabWeekTableViewModel = new Lazy<TabWeekViewModel>(Mvx.IocConstruct<TabWeekViewModel>);
+            _tabWeekTableViewModel = new Lazy<TabWeekTableViewModel>(Mvx.IocConstruct<TabWeekTableViewModel>);
 
 
         }
@@ -79,10 +90,11 @@ namespace WeatherApp.Core.ViewModels
         public async void GetWeatherData()
         {
             Weather = await _weatherService.GetWeather();
+            DailyDataList = await _weatherService.GetDailyDatas();
 
             WeatherVM.Weather = this.Weather;
             TabDetailsVM.Weather = this.Weather;
-            TabWeekVM.Weather = this.Weather;
+            TabWeekVM.DailyDataList = this.DailyDataList;
         }
 
         public IMvxCommand NotificationsCommand
