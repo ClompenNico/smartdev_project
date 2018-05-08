@@ -19,4 +19,3 @@ C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\Weat
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csproj.CopyComplete
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.dll
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.pdb
-C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Core\obj\Debug\WeatherApp.Core.csprojResolveAssemblyReference.cache

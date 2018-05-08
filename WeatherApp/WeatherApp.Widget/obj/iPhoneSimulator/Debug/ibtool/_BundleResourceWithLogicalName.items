@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool\MainInterface.storyboardc\Info.plist">
+      <LogicalName>MainInterface.storyboardc/Info.plist</LogicalName>
+      <InterfaceDefinition>MainInterface.storyboard</InterfaceDefinition>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool\MainInterface.storyboardc\M4Y-Lb-cyx-view-S3S-Oj-5AN.nib">
+      <LogicalName>MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</LogicalName>
+      <InterfaceDefinition>MainInterface.storyboard</InterfaceDefinition>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj\iPhoneSimulator\Debug\ibtool\MainInterface.storyboardc\UIViewController-M4Y-Lb-cyx.nib">
+      <LogicalName>MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</LogicalName>
+      <InterfaceDefinition>MainInterface.storyboard</InterfaceDefinition>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+  </ItemGroup>
+</Project>

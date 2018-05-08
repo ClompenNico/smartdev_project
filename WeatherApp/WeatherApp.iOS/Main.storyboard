@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="242" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="0.0"/>
+            <point key="canvasLocation" x="7" y="-394"/>
         </scene>
         <scene sceneID="3429">
             <objects>
@@ -118,7 +118,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6690" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/Humidity.png" misplaced="YES">
                                 <rect key="frame" x="274" y="84" width="40" height="40"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6691" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/UVIndex.png" misplaced="YES">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6691" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" image="Images/Details/UVIndexL.png">
                                 <rect key="frame" x="101" y="305" width="40" height="40"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6692" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Details/Visibility.png" misplaced="YES">
@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3443" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="845"/>
+            <point key="canvasLocation" x="7" y="440"/>
         </scene>
         <scene sceneID="23815">
             <objects>
@@ -347,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23818" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="426"/>
+            <point key="canvasLocation" x="608" y="436"/>
         </scene>
         <scene sceneID="51836">
             <objects>
@@ -366,7 +366,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Day]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="59953" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                             <rect key="frame" x="20" y="8" width="182" height="27"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="24" weight="heavy"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24" weight="semibold"/>
                                             <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -396,6 +396,7 @@
                                         <constraint id="61007" firstItem="59956" firstAttribute="trailing" secondItem="59955" secondAttribute="trailing"/>
                                         <constraint id="61008" firstItem="59956" firstAttribute="top" secondItem="59955" secondAttribute="bottom" constant="9"/>
                                         <constraint id="61886" firstItem="59956" firstAttribute="leading" secondItem="59954" secondAttribute="trailing" constant="18"/>
+                                        <constraint id="63680" firstItem="59956" firstAttribute="centerY" secondItem="59954" secondAttribute="centerY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.19215686274509805" green="0.34901960784313724" blue="0.36862745098039218" alpha="1"/>
@@ -415,7 +416,24 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51843" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="427"/>
+            <point key="canvasLocation" x="9" y="1301"/>
+        </scene>
+        <scene sceneID="62343">
+            <objects>
+                <viewController id="62344" sceneMemberID="viewController" customClass="DayView" storyboardIdentifier="DayView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="62341"/>
+                        <viewControllerLayoutGuide type="bottom" id="62342"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62345">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62346" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="1301"/>
         </scene>
     </scenes>
     <resources>
@@ -455,5 +473,6 @@
         <image name="Backgrounds/Sunrise812.png" width="375" height="812"/>
         <image name="Backgrounds/NightDefault.png" width="750" height="1334"/>
         <image name="Backgrounds/SunriseDefault.png" width="750" height="1334"/>
+        <image name="Images/Details/UVIndexL.png" width="50" height="50"/>
     </resources>
 </document>

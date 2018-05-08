@@ -32,5 +32,14 @@ namespace WeatherApp.Core.Repositories
             //return GetAsync<List<Daily.DailyDatas>>(url);
         }
 
+        /*
+        public async Task<Weather.Daily.DailyDatas>GetDayByTime()
+        {
+            private Weather.Daily.DailyDatas _daily;
+            if(_daily == null) await GetDailyDatas();
+            return _daily
+        }
+        */
+
     }
 }

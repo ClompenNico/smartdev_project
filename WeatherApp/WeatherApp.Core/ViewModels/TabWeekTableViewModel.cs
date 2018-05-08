@@ -33,11 +33,24 @@ namespace WeatherApp.Core.ViewModels
             }
         }
 
-
-
         private async void LoadData()
         {
             DailyDataList = await _weatherService.GetDailyDatas();
         }
+
+        /*
+        public MvxCommand<Weather.Daily.DailyDatas> NavigateToDayCommand
+        {
+            get
+            {
+                return new MvxCommand<Weather.Daily.DailyDatas>(
+                        selectedDay =>
+                        {
+                            ShowViewModel<DayViewModel>(new { dayTime = selectedDay.Day });
+                        }
+                    );
+            }
+        }
+        */
     }
 }

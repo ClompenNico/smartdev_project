@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Threading;
 using UIKit;
 using WeatherApp.Core.Models;
+using WeatherApp.Core.Services;
 using WineApp.IOS;
 //using UserNotifications;
 
@@ -103,7 +104,7 @@ namespace WeatherApp.iOS
             // Use this method to release shared resources, save user data, invalidate timers and store the application state.
             // If your application supports background exection this method is called instead of WillTerminate when the user quits.
 
-            //DailyNotificationTask();
+            DailyNotificationTask();
         }
 
         public override void WillEnterForeground(UIApplication application)
@@ -125,7 +126,7 @@ namespace WeatherApp.iOS
         {
             // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
 
-            DailyNotificationTask();
+            //DailyNotificationTask();
         }
 
         //TIJD NAAR BELGIESCHE TIJD VERANDEREN + 24uur ipv 12uur
@@ -147,11 +148,15 @@ namespace WeatherApp.iOS
 
         }
 
+        //protected readonly IWeatherService _weatherService;
+
         //DAGELIJKSE NOTIFICATIES VOOR ELKE OCHTEND
 
-        public void DailyNotificationTask()
+        public void DailyNotificationTask(/*IWeatherService weatherService*/)
         {
             bool Go = true;
+
+            //_navigationService = navigationService;
 
             while (GlobalVariables.ToggleDailyValue == true && Go == true)
             {
@@ -215,7 +220,7 @@ namespace WeatherApp.iOS
                 Console.WriteLine(Go);
                 Console.WriteLine("WACHTEN OP UUR");
 
-                if (curTime == "22:35")
+                if (curTime == "07:01")
                 {
                     Go = true;
                 }

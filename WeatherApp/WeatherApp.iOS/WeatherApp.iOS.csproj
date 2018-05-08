@@ -66,7 +66,12 @@
     <Compile Include="btnNotification.designer.cs">
       <DependentUpon>btnNotification.cs</DependentUpon>
     </Compile>
+    <Compile Include="Converters\StringToAnimationConverter.cs" />
     <Compile Include="Converters\StringToImageConverter.cs" />
+    <Compile Include="Views\DayView.cs" />
+    <Compile Include="Views\DayView.designer.cs">
+      <DependentUpon>DayView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="TableViewSources\WeekTableViewSource.cs" />
@@ -107,6 +112,7 @@
     <Compile Include="Views\WeekTableCell.designer.cs">
       <DependentUpon>WeekTableCell.cs</DependentUpon>
     </Compile>
+    <BundleResource Include="Resources\Images\Details\UVIndexL.png" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -129,6 +135,7 @@
     <Content Include="Resources\Icon.png" />
     <Content Include="Resources\Iconv3%402.png" />
     <Content Include="Resources\Iconv3%403.png" />
+    <BundleResource Include="Resources\UVIndexAnim.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Setup.cs" />
@@ -136,6 +143,9 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Lottie.iOS, Version=1.0.6647.21929, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.1\lib\xamarinios\Lottie.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="MvvmCross.Binding, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmCross.Binding.5.7.0\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
     </Reference>
@@ -172,6 +182,9 @@
     <Reference Include="MvvmCross.Plugins.Messenger, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmCross.Plugin.Messenger.5.7.0\lib\Xamarin.iOS10\MvvmCross.Plugins.Messenger.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -194,6 +207,12 @@
     <ProjectReference Include="..\WeatherApp.Core\WeatherApp.Core.csproj">
       <Project>{f9e13f75-e520-4a53-9118-7161e6d22d60}</Project>
       <Name>WeatherApp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeatherApp.Widget\WeatherApp.Widget.csproj">
+      <Project>{8ae0d2e2-49da-415b-b282-42fdb2f3d822}</Project>
+      <Name>WeatherApp.Widget</Name>
+      <IsAppExtension>true</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

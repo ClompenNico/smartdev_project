@@ -30,6 +30,12 @@ namespace WeatherApp.iOS
 
             set.Bind(_weekTableViewSource).To(vm => vm.DailyDataList);
 
+            /*
+            set.Bind(_weekTableViewSource)
+                .For(src => src.SelectionChangedCommand)
+                .To(vm => vm.NavigateToDayCommand);
+            */
+            
             set.Apply();
         }
     }

@@ -28,5 +28,12 @@ namespace WeatherApp.Core.Services
         {
             return await _weatherRepository.GetDailyDatas();
         }
+
+        /*
+        public async Task<Weather.Daily.DailyDatas> GetDayByTime(string dayTime)
+        {
+            return await _weatherRepository.GetDayByTime(dayTime);
+        }
+        */
     }
 }
