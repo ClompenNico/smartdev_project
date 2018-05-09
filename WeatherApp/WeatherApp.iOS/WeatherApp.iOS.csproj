@@ -58,6 +58,9 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\LocationPluginBootstrap.cs" />
@@ -113,6 +116,10 @@
       <DependentUpon>WeekTableCell.cs</DependentUpon>
     </Compile>
     <BundleResource Include="Resources\Images\Details\UVIndexL.png" />
+    <BundleResource Include="Resources\Images\Details\Pressure.png" />
+    <BundleResource Include="Resources\Images\Details\DewPoint.png" />
+    <BundleResource Include="dewpoint.json" />
+    <BundleResource Include="Resources\Images\Details\Humidity.png" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -136,6 +143,11 @@
     <Content Include="Resources\Iconv3%402.png" />
     <Content Include="Resources\Iconv3%403.png" />
     <BundleResource Include="Resources\UVIndexAnim.json" />
+    <BundleResource Include="Resources\Pressure.json" />
+    <BundleResource Include="Resources\Visibility.json" />
+    <BundleResource Include="Resources\dewing.json" />
+    <BundleResource Include="Resources\apparenttemp.json" />
+    <BundleResource Include="Resources\Humidity.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Setup.cs" />
@@ -186,6 +198,7 @@
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
@@ -193,12 +206,9 @@
   <ItemGroup>
     <Content Include="Entitlements.plist" />
     <BundleResource Include="Resources\Images\weather.png" />
-    <BundleResource Include="Resources\Images\Details\Humidity.png" />
-    <BundleResource Include="Resources\Images\Details\Pressure.png" />
     <BundleResource Include="Resources\Images\Details\UVIndex.png" />
     <BundleResource Include="Resources\Images\Details\Visibility.png" />
     <BundleResource Include="Resources\Images\Details\ApparentTemperature.png" />
-    <BundleResource Include="Resources\Images\Details\DewPoint.png" />
     <BundleResource Include="Resources\Images\week.png" />
     <BundleResource Include="Resources\Images\details.png" />
     <Content Include="Resources\Iconv3.png" />

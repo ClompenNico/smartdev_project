@@ -74,7 +74,6 @@ C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimul
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Backgrounds\Sunrise736.png
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Backgrounds\Sunrise812.png
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Images\weather.png
-C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Images\Details\Humidity.png
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Images\Details\Pressure.png
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Images\Details\UVIndex.png
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Images\Details\Visibility.png
@@ -89,3 +88,4 @@ C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimul
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\WeatherApp.iOS.exe
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\WeatherApp.iOS.pdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\WeatherApp.iOS.csprojResolveAssemblyReference.cache
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\Images\Details\Humidity.png

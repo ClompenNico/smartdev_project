@@ -13,6 +13,11 @@ namespace WeatherApp.iOS
     public partial class TabDetailsView : MvxViewController<TabDetailsViewModel>
     {
         LOTAnimationView _uvIndexAnimation;
+        LOTAnimationView _pressureAnimation;
+        LOTAnimationView _humidityAnimation;
+        LOTAnimationView _visibilityAnimation;
+        LOTAnimationView _dewpointAnimation;
+        LOTAnimationView _apparenttempAnimation;
 
         public TabDetailsView (IntPtr handle) : base (handle)
         {
@@ -25,17 +30,46 @@ namespace WeatherApp.iOS
 
             MvxFluentBindingDescriptionSet<TabDetailsView, TabDetailsViewModel> set = this.CreateBindingSet<TabDetailsView, TabDetailsViewModel>();
 
+            //ANIMATIES OPVRAGEN, GROTE INSTELLEN, SCALEN, LOOP & BINDEN
             this._uvIndexAnimation = LOTAnimationView.AnimationNamed("UVIndexAnim.json"); //your animation name for the uv sun
             this._uvIndexAnimation.Frame = new CoreGraphics.CGRect(0, 0, 50, 50); //Depending on the dimensions of you animation and cell
             this._uvIndexAnimation.ContentMode = UIViewContentMode.ScaleAspectFill;
-            this._uvIndexAnimation.LoopAnimation = true;
             this.imgUvInd.AddSubview(this._uvIndexAnimation);
 
+            this._pressureAnimation = LOTAnimationView.AnimationNamed("Pressure.json");
+            this._pressureAnimation.Frame = new CoreGraphics.CGRect(0, 0, 50, 50); //Depending on the dimensions of you animation and cell
+            this._pressureAnimation.ContentMode = UIViewContentMode.ScaleAspectFill;
+            this._pressureAnimation.LoopAnimation = true;
+            this.imgPress.AddSubview(this._pressureAnimation);
+
+            this._humidityAnimation = LOTAnimationView.AnimationNamed("Humidity.json");
+            this._humidityAnimation.Frame = new CoreGraphics.CGRect(0, 0, 50, 50); //Depending on the dimensions of you animation and cell
+            this._humidityAnimation.ContentMode = UIViewContentMode.ScaleAspectFill;
+            this.imgHum.AddSubview(this._humidityAnimation);
+
+            this._visibilityAnimation = LOTAnimationView.AnimationNamed("Visibility.json");
+            this._visibilityAnimation.Frame = new CoreGraphics.CGRect(0, 0, 50, 50); //Depending on the dimensions of you animation and cell
+            this._visibilityAnimation.ContentMode = UIViewContentMode.ScaleAspectFill;
+            this._visibilityAnimation.LoopAnimation = true;
+            this.imgVis.AddSubview(this._visibilityAnimation);
+
+            this._dewpointAnimation = LOTAnimationView.AnimationNamed("dewing.json");
+            this._dewpointAnimation.Frame = new CoreGraphics.CGRect(0, 0, 50, 50); //Depending on the dimensions of you animation and cell
+            this._dewpointAnimation.ContentMode = UIViewContentMode.ScaleAspectFill;
+            this._dewpointAnimation.LoopAnimation = true;
+            this.imgDew.AddSubview(this._dewpointAnimation);
+
+            this._apparenttempAnimation = LOTAnimationView.AnimationNamed("apparenttemp.json");
+            this._apparenttempAnimation.Frame = new CoreGraphics.CGRect(0, 0, 50, 50); //Depending on the dimensions of you animation and cell
+            this._apparenttempAnimation.ContentMode = UIViewContentMode.ScaleAspectFill;
+            this._apparenttempAnimation.LoopAnimation = true;
+            this.imgApparentTemp.AddSubview(this._apparenttempAnimation);
+
             //set.Bind(_uvIndexAnimation).For(ani => ani.SceneModel);
-                /*
-                .To(rev => rev.Weather.Currently.UvIndex)
-                .WithConversion<StringToImageConverter>();
-                */
+            /*
+            .To(rev => rev.Weather.Currently.UvIndex)
+            .WithConversion<StringToImageConverter>();
+            */
 
             set.Bind(lblApparentTemp).To(vm => vm.Weather.Currently.ApparentTemp);
             set.Bind(lblHum).To(vm => vm.Weather.Currently.Hum);
@@ -53,7 +87,13 @@ namespace WeatherApp.iOS
 
             base.ViewWillAppear(animated);
 
+            //ANIMATIES STARTEN
             this._uvIndexAnimation.Play();
+            this._pressureAnimation.Play();
+            this._humidityAnimation.Play();
+            this._visibilityAnimation.Play();
+            this._dewpointAnimation.Play();
+            this._apparenttempAnimation.Play();
 
             if (currentTime <= 6 || currentTime >= 21)
             {

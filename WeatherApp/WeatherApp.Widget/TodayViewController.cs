@@ -13,37 +13,9 @@ namespace WeatherApp.Widget
 {
     public partial class TodayViewController : SLComposeServiceViewController, INCWidgetProviding
     {
-        public Weather _weather;
-        public Weather Weather
-        {
-            get { return _weather; }
-            set
-            {
-                _weather = value;
-            }
-        }
-
         public TodayViewController(IntPtr handle) : base(handle)
         {
         }
-
-        protected readonly IWeatherService _weatherService;
-
-        public TodayViewController(IWeatherService weatherService)
-        {
-            this._weatherService = weatherService;
-        }
-
-        //Luisteren naar het bericht met de locatie
-        //private readonly IMvxMessenger _messenger;
-        //private readonly MvxSubscriptionToken _token;
-
-        /*
-        public TodayViewController(IWeatherService weatherService)
-        {
-            this._weatherService = weatherService;
-        }
-        */
 
         public override void DidReceiveMemoryWarning()
         {

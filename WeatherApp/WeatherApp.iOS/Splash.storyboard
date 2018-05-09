@@ -40,20 +40,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Images/Currently/clear-day.png" width="50" height="50"/>
-        <image name="Images/Currently/clear-night.png" width="50" height="50"/>
-        <image name="Images/Currently/cloudy.png" width="50" height="50"/>
-        <image name="Images/Currently/fog.png" width="50" height="50"/>
-        <image name="Images/Currently/partly-cloudy-day.png" width="50" height="50"/>
-        <image name="Images/Currently/partly-cloudy-night.png" width="50" height="50"/>
-        <image name="Images/Currently/rain.png" width="50" height="50"/>
-        <image name="Images/Currently/sleet.png" width="50" height="50"/>
-        <image name="Images/Currently/snow.png" width="50" height="50"/>
-        <image name="Images/Currently/wind.png" width="50" height="50"/>
+        <image name="Images/Currently/clear-day.png" width="30" height="30"/>
+        <image name="Images/Currently/clear-night.png" width="30" height="30"/>
+        <image name="Images/Currently/cloudy.png" width="30" height="30"/>
+        <image name="Images/Currently/fog.png" width="30" height="30"/>
+        <image name="Images/Currently/partly-cloudy-day.png" width="30" height="30"/>
+        <image name="Images/Currently/partly-cloudy-night.png" width="30" height="30"/>
+        <image name="Images/Currently/rain.png" width="30" height="30"/>
+        <image name="Images/Currently/sleet.png" width="30" height="30"/>
+        <image name="Images/Currently/snow.png" width="30" height="30"/>
+        <image name="Images/Currently/wind.png" width="30" height="30"/>
         <image name="Images/Details/ApparentTemperature.png" width="50" height="50"/>
         <image name="Images/Details/DewPoint.png" width="50" height="50"/>
         <image name="Images/Details/Humidity.png" width="50" height="50"/>
-        <image name="Images/Details/Pressure.png" width="50" height="50"/>
         <image name="Images/Details/UVIndex.png" width="50" height="50"/>
         <image name="Images/Details/Visibility.png" width="50" height="50"/>
         <image name="Images/details.png" width="30" height="30"/>
@@ -61,5 +60,22 @@
         <image name="Images/week.png" width="30" height="30"/>
         <image name="Iconv3.png" width="500" height="500"/>
         <image name="Icon.png" width="500" height="500"/>
+        <image name="Backgrounds/Day568.png" width="320" height="568"/>
+        <image name="Backgrounds/Day667.png" width="375" height="667"/>
+        <image name="Backgrounds/Day736.png" width="414" height="736"/>
+        <image name="Backgrounds/Day812.png" width="375" height="812"/>
+        <image name="Backgrounds/DayDefault.png" width="750" height="1334"/>
+        <image name="Backgrounds/Night568.png" width="320" height="568"/>
+        <image name="Backgrounds/Night667.png" width="375" height="667"/>
+        <image name="Backgrounds/Night736.png" width="414" height="736"/>
+        <image name="Backgrounds/Night812.png" width="375" height="812"/>
+        <image name="Backgrounds/NightDefault.png" width="750" height="1334"/>
+        <image name="Backgrounds/Sunrise568.png" width="320" height="568"/>
+        <image name="Backgrounds/Sunrise667.png" width="375" height="667"/>
+        <image name="Backgrounds/Sunrise736.png" width="414" height="736"/>
+        <image name="Backgrounds/Sunrise812.png" width="375" height="812"/>
+        <image name="Backgrounds/SunriseDefault.png" width="750" height="1334"/>
+        <image name="Images/Details/UVIndexL.png" width="50" height="50"/>
+        <image name="Images/Details/Pressure.png" width="50" height="50"/>
     </resources>
 </document>

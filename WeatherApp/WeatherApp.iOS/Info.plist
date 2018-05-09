@@ -36,6 +36,10 @@
 	<string>Location Services will be used to share your location while using the application.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location Services will be used to share your location while using the application.</string>
-  
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+		<string>fetch</string>
+	</array>
 </dict>
 </plist>
