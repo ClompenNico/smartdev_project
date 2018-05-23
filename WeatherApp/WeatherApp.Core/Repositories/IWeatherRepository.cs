@@ -8,6 +8,7 @@ namespace WeatherApp.Core.Repositories
 {
     public interface IWeatherRepository
     {
+        //Weer & dagen
         Task<Weather> GetWeather();
         Task<List<Weather.Daily.DailyDatas>> GetDailyDatas();
     }

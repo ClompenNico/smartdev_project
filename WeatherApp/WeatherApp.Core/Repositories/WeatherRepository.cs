@@ -12,18 +12,18 @@ namespace WeatherApp.Core.Repositories
 {
     public class WeatherRepository : BaseRepository, IWeatherRepository
     {
+        //BASE URL & UNITS
         private const string _BASEURL = "https://api.darksky.net/forecast/";
-        //private const string _COORDINATES = "37.8267,-122.4233";
-        //double _LATITUDE = 0;       //private const        37.8267        50.815474
-        //double _LONGITUDE = 0;      //private const        -122.4233      3.2718397999999524
         string _PARAMETER = "units=auto";
 
+        //Weer opvragen
         public Task<Weather>GetWeather()
         {
             string url = String.Format("{0}{1}/{2},{3}?{4}", _BASEURL, _API_KEY, GlobalVariables._LATITUDE, GlobalVariables._LONGITUDE, _PARAMETER);
             return GetAsync<Weather>(url);
         }
 
+        //List van dagen
         public async Task<List<Weather.Daily.DailyDatas>>GetDailyDatas()
         {
             string url = String.Format("{0}{1}/{2},{3}?{4}", _BASEURL, _API_KEY, GlobalVariables._LATITUDE, GlobalVariables._LONGITUDE, _PARAMETER);
@@ -31,15 +31,5 @@ namespace WeatherApp.Core.Repositories
             return dailyDatas;
             //return GetAsync<List<Daily.DailyDatas>>(url);
         }
-
-        /*
-        public async Task<Weather.Daily.DailyDatas>GetDayByTime()
-        {
-            private Weather.Daily.DailyDatas _daily;
-            if(_daily == null) await GetDailyDatas();
-            return _daily
-        }
-        */
-
     }
 }

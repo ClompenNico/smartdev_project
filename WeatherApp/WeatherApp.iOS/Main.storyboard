@@ -247,6 +247,9 @@
                             <constraint id="57455" firstItem="10662" firstAttribute="bottom" secondItem="10665" secondAttribute="top" constant="2"/>
                             <constraint id="59110" firstItem="6689" firstAttribute="top" secondItem="3438" secondAttribute="bottom" constant="64"/>
                             <constraint id="59111" firstItem="3439" firstAttribute="top" secondItem="10666" secondAttribute="bottom" constant="85"/>
+                            <constraint id="67145" firstItem="10663" firstAttribute="centerY" secondItem="10664" secondAttribute="centerY"/>
+                            <constraint id="67146" firstItem="6697" firstAttribute="centerY" secondItem="6946" secondAttribute="centerY"/>
+                            <constraint id="67147" firstItem="10666" firstAttribute="centerY" secondItem="10667" secondAttribute="centerY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -303,20 +306,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="33930" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="259" y="41" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deliver a notification at 7 am, with the forecast for the day." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="33939" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2" misplaced="YES">
                                 <rect key="frame" x="20" y="75" width="374" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="34216" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="329" y="41" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -325,24 +316,18 @@
                         <constraints>
                             <constraint id="50839" firstItem="30584" firstAttribute="top" secondItem="23813" secondAttribute="bottom" constant="16"/>
                             <constraint id="50840" firstItem="30744" firstAttribute="centerY" secondItem="30584" secondAttribute="centerY"/>
-                            <constraint id="50841" firstItem="33930" firstAttribute="centerY" secondItem="30584" secondAttribute="centerY"/>
-                            <constraint id="50842" firstItem="34216" firstAttribute="centerY" secondItem="30584" secondAttribute="centerY"/>
                             <constraint id="50843" firstItem="30584" firstAttribute="leading" secondItem="23817" secondAttribute="leadingMargin"/>
                             <constraint id="50844" firstItem="30744" firstAttribute="leading" secondItem="23817" secondAttribute="leadingMargin" constant="70"/>
-                            <constraint id="50845" firstItem="23817" firstAttribute="trailingMargin" secondItem="34216" secondAttribute="trailing" constant="23"/>
                             <constraint id="50847" firstItem="33939" firstAttribute="top" secondItem="30584" secondAttribute="bottom" constant="8"/>
                             <constraint id="50848" firstItem="33939" firstAttribute="leading" secondItem="23817" secondAttribute="leadingMargin"/>
                             <constraint id="50849" firstItem="33939" firstAttribute="trailing" secondItem="23817" secondAttribute="trailingMargin"/>
-                            <constraint id="51480" firstItem="23817" firstAttribute="trailingMargin" secondItem="33930" secondAttribute="trailing" constant="93"/>
                             <constraint id="51483" firstItem="30256" firstAttribute="centerX" secondItem="23817" secondAttribute="centerX"/>
                             <constraint id="51484" firstItem="30256" firstAttribute="centerY" secondItem="23817" secondAttribute="centerY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnToggleDaily" destination="30584" id="name-outlet-30584"/>
-                        <outlet property="lblValue" destination="33930" id="name-outlet-33930"/>
                         <outlet property="lblDailySummary" destination="33939" id="name-outlet-33939"/>
-                        <outlet property="lblFileValue" destination="34216" id="name-outlet-34216"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23818" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,10 +16,12 @@ namespace WeatherApp.iOS
         }
         */
 
+        //bool voor constructed
         private bool _constructed;
 
         public WeatherTabsView()
         {
+            //Als constructed, dan viewdidload uitvoeren
             _constructed = true;
             ViewDidLoad();
         }
@@ -34,6 +36,7 @@ namespace WeatherApp.iOS
 
             MvxFluentBindingDescriptionSet<WeatherTabsView, WeatherTabsViewModel> set = this.CreateBindingSet<WeatherTabsView, WeatherTabsViewModel>();
 
+            //Button navigatie binden
             set.Bind(NavigationItem.RightBarButtonItem).To(vm => vm.NotificationsCommand);
             set.Apply();
 
@@ -46,6 +49,7 @@ namespace WeatherApp.iOS
             //voeg viewcontrollers toe voor elk tabblad en bewaar
             var viewControllers = new UIViewController[]
             {
+                //Iedere tab met correcte afbeelding weergeven
                 CreateSingleTab("Weather", "Images/weather.png", ViewModel.WeatherVM),
                 CreateSingleTab("Details", "Images/details.png", ViewModel.TabDetailsVM),
                 CreateSingleTab("Week", "Images/week.png", ViewModel.TabWeekVM),

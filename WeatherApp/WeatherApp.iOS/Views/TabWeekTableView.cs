@@ -26,15 +26,11 @@ namespace WeatherApp.iOS
             this.TableView.Source = _weekTableViewSource;
             this.TableView.ReloadData();
 
+            //viewModel met model binden
             MvxFluentBindingDescriptionSet<TabWeekTableView, TabWeekTableViewModel> set = new MvxFluentBindingDescriptionSet<TabWeekTableView, TabWeekTableViewModel>(this);
 
+            //Tablesource binden met de list
             set.Bind(_weekTableViewSource).To(vm => vm.DailyDataList);
-
-            /*
-            set.Bind(_weekTableViewSource)
-                .For(src => src.SelectionChangedCommand)
-                .To(vm => vm.NavigateToDayCommand);
-            */
             
             set.Apply();
         }

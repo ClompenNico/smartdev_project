@@ -8,8 +8,5 @@ namespace WeatherApp.Core.Services
     {
         Task<Weather> GetWeather();
         Task<List<Weather.Daily.DailyDatas>> GetDailyDatas();
-        /*
-        Task<Weather.Daily.DailyDatas> GetDayByTime(string dayTime);
-        */
     }
 }

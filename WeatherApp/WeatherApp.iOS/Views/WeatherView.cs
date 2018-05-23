@@ -17,14 +17,12 @@ namespace WeatherApp.iOS
 
         public override void ViewWillAppear(bool animated)
         {
+            //Uur opvragen voor de background
             int currentTime = DateTime.Now.Hour;
 
             base.ViewWillAppear(animated);
 
-            //string locatie = "Day";
-
-            //LoadBackground(locatie);
-
+            //If else statement voor background naargelange het uur
             if (currentTime <= 6 || currentTime >= 21)
             {
                 string locatie = "Night";
@@ -43,19 +41,14 @@ namespace WeatherApp.iOS
             else
             {
                 string locatie = "Day";
-                Console.WriteLine("Dikke rip");
+                Console.WriteLine("Minder goed");
                 LoadBackground(locatie);
             }
-
-            //sunrisecolor
-            //ae6f25
-            //1b2936
-
-
         }
 
         public void LoadBackground(string locatie)
         {
+            //Correcte background grootte assignen (voor verschillende iPhone groottes)
             if (UIScreen.MainScreen.Bounds.Height <= 568)
                 this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Backgrounds/" + locatie + "568.png"));
             else if (UIScreen.MainScreen.Bounds.Height <= 671)
@@ -72,7 +65,7 @@ namespace WeatherApp.iOS
         {
             base.ViewDidLoad();
 
-            //string temp =    //.ToString() + "°c"
+            //Alle labels binden + weer icon dat aanpast naar gelange het weer
 
             MvxFluentBindingDescriptionSet<WeatherView, WeatherViewModel> set = this.CreateBindingSet<WeatherView, WeatherViewModel>();
 
@@ -83,13 +76,13 @@ namespace WeatherApp.iOS
             set.Bind(lblLatitude).To(vm => vm.Weather.Latitude);
             set.Bind(lblLongitude).To(vm => vm.Weather.Longitude);
 
+            //Icon MET CONVERTER!
             set.Bind(imgIcon)
                 .For(img => img.Image)
                 .To(vm => vm.Weather.Currently.Icon)
                 .WithConversion<StringToImageConverter>();        
 
-            //set.Bind(imgBackground.Image = UIImage.FromFile("Images/Sunrise.png"));
-
+            //Apply bindings
             set.Apply();
         }
     }

@@ -19,6 +19,7 @@ namespace WeatherApp.Core.ViewModels
         private readonly MvxSubscriptionToken _token;
 
         protected readonly IWeatherService _weatherService;
+
         public WeatherViewModel(IWeatherService weatherService, IMvxMessenger messenger)
         {
             _messenger = messenger;
@@ -28,6 +29,7 @@ namespace WeatherApp.Core.ViewModels
         }
 
         private Weather _weather;
+
         public Weather Weather
         {
             get { return _weather; }

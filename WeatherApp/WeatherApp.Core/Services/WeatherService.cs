@@ -14,26 +14,29 @@ namespace WeatherApp.Core.Services
         private static List<Weather.Daily.DailyDatas> _dailyDatas = new List<Weather.Daily.DailyDatas>();
         private readonly IWeatherRepository _weatherRepository;
 
+        //DI
         public WeatherService(IWeatherRepository weatherRepository)
         {
             _weatherRepository = weatherRepository;
+            GetWeatherUpdate();
         }
 
+        //WEER
         public async Task<Weather> GetWeather()
         {
             return await _weatherRepository.GetWeather();
         }
 
+        //LIJST DAGEN
         public async Task<List<Weather.Daily.DailyDatas>> GetDailyDatas()
         {
             return await _weatherRepository.GetDailyDatas();
         }
 
-        /*
-        public async Task<Weather.Daily.DailyDatas> GetDayByTime(string dayTime)
+        //Update voor local notificatie voor in appdelegate
+        public async void GetWeatherUpdate()
         {
-            return await _weatherRepository.GetDayByTime(dayTime);
+            GlobalVariables.weatherUpdate = await _weatherRepository.GetWeather();
         }
-        */
     }
 }

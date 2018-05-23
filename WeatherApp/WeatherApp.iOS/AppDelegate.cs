@@ -76,6 +76,10 @@ namespace WeatherApp.iOS
                 }
             }
 
+            UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
+
+            SetMinimumBackgroundFetchInterval();
+
             return true;
         }
 
@@ -162,14 +166,14 @@ namespace WeatherApp.iOS
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(MINIMUM_BACKGROUND_FETCH_INTERVAL);
         }
 
-        Weather weather;
+        //repo in variable plaatsen voor gebruik
         WeatherRepository weatherRepository = new WeatherRepository();
 
         public async override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
         {
             // Check for new data, and display it
-            
-            weather = await weatherRepository.GetWeather();
+            //Update static variable
+            GlobalVariables.weatherUpdate = await weatherRepository.GetWeather();
 
             // Inform system of fetch results
             completionHandler(UIBackgroundFetchResult.NewData);
@@ -184,79 +188,74 @@ namespace WeatherApp.iOS
 
             //_navigationService = navigationService;
 
-            while (GlobalVariables.FileValue == "True" && Go == true)
+            NotificationService.ReadFromFile();
+
+            while (GlobalVariables.FileValue == "True")
             {
-                Thread.Sleep(5000);
+                Console.WriteLine("Daily notification on");
 
-                //DateTime SetTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-                DateTime SetTime = DateTime.Now.ToUniversalTime();
-                DateTime curBEtime = setBelgianTime(SetTime);
-                //DateTime resultDate = DateTime.ParseExact(SetTime, "dd/MM/yyyy - HH:mm", new CultureInfo("nl-BE"));
-                //resultDate = resultDate.AddHours(+1);
-                //resultDate = resultDate.AddMinutes(+1);
-                //resultDate = resultDate.AddSeconds(+10);
-                string curTime = curBEtime.ToString("HH:mm");
-                Console.WriteLine(curTime);
-                Console.WriteLine(GlobalVariables.ToggleDailyValue);
-                Console.WriteLine(Go);
-                Console.WriteLine("WACHTEN OP UUR");
-
-                if (GlobalVariables.ToggleDailyValue == true && curTime == "17:55" /*DateTime.Today.Hour == 18 && DateTime.Today.Minute == 50*/)
+                while (GlobalVariables.FileValue == "True" && Go == true)
                 {
-                    Go = false;
-                    Console.WriteLine("NOTIFICATIE VERSTUREN!");
+                    Thread.Sleep(5000);
+
+                    //DateTime SetTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                    DateTime SetTime = DateTime.Now.ToUniversalTime();
+                    DateTime curBEtime = setBelgianTime(SetTime);
+
+                    string curTime = curBEtime.ToString("HH:mm");
+
                     Console.WriteLine(curTime);
+                    Console.WriteLine("Waiting for 7am: " + Go.ToString());
 
-                    // create the notification
-                    var notification = new UILocalNotification();
+                    if (GlobalVariables.FileValue == "True" && curTime == "15:27" /*DateTime.Today.Hour == 18 && DateTime.Today.Minute == 50*/)
+                    {
+                        Go = false;
+                        Console.WriteLine("NOTIFICATIE VERSTUREN!");
+                        Console.WriteLine(curTime);
 
-                    // set the fire date (the date time in which it will fire)
-                    notification.FireDate = NSDate.FromTimeIntervalSinceNow(1);
+                        // create the notification
+                        var notification = new UILocalNotification();
 
-                    GlobalVariables._LATITUDE = 50;
-                    GlobalVariables._LONGITUDE = 3;
+                        // set the fire date (the date time in which it will fire)
+                        notification.FireDate = NSDate.FromTimeIntervalSinceNow(1);
 
-                    //WeatherRepository weatherRepository = new WeatherRepository();
+                        string body = GlobalVariables.weatherUpdate.Currently.Temp + " " + GlobalVariables.weatherUpdate.Currently.Summary;
 
-                    //Weather weather = await weatherRepository.GetWeather();
+                        // configure the alert
+                        //notification.AlertLaunchImage = "iconv3.png";
+                        notification.AlertTitle = "Today's prediction"; //watch alert
+                        notification.AlertAction = "Today's prediction";   //view alert
+                        notification.AlertBody = body; //"Your one minute alert has fired!";
 
-                    // configure the alert
-                    //notification.AlertLaunchImage = "iconv3.png";
-                    notification.AlertTitle = "Watch Alert!";
-                    notification.AlertAction = "View Alert!";
-                    notification.AlertBody = weather.Currently.Summary; //"Your one minute alert has fired!";
+                        //=======NULLREFERENCE :///
 
-                    // modify the badge
-                    notification.ApplicationIconBadgeNumber = 1;
+                        // modify the badge
+                        notification.ApplicationIconBadgeNumber = 1;
 
-                    // set the sound to be the default sound
-                    notification.SoundName = UILocalNotification.DefaultSoundName;
+                        // set the sound to be the default sound
+                        notification.SoundName = UILocalNotification.DefaultSoundName;
 
-                    // schedule it
-                    UIApplication.SharedApplication.ScheduleLocalNotification(notification);
+                        // schedule it
+                        UIApplication.SharedApplication.ScheduleLocalNotification(notification);
+                    }
                 }
-            }
 
-            while (Go == false)
-            {
-                Thread.Sleep(5000);
-
-                //DateTime SetTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-                DateTime SetTime = DateTime.Now.ToUniversalTime();
-                DateTime curBEtime = setBelgianTime(SetTime);
-                //DateTime resultDate = DateTime.ParseExact(SetTime, "dd/MM/yyyy - HH:mm", new CultureInfo("nl-BE"));
-                //resultDate = resultDate.AddHours(+1);
-                //resultDate = resultDate.AddMinutes(+1);
-                //resultDate = resultDate.AddSeconds(+10);
-                string curTime = curBEtime.ToString("HH:mm");
-                Console.WriteLine(curTime);
-                Console.WriteLine(GlobalVariables.ToggleDailyValue);
-                Console.WriteLine(Go);
-                Console.WriteLine("WACHTEN OP UUR");
-
-                if (curTime == "17:56" || curTime == "17:57")
+                while (Go == false)
                 {
-                    Go = true;
+                    //Sleep doen om systeem niet te overbelasten
+                    Thread.Sleep(5000);
+
+                    DateTime SetTime = DateTime.Now.ToUniversalTime();
+                    DateTime curBEtime = setBelgianTime(SetTime);
+
+                    string curTime = curBEtime.ToString("HH:mm");
+                    Console.WriteLine(curTime);
+                    Console.WriteLine("Waiting for 7am: " + Go.ToString());
+
+                    if (curTime == "15:28")
+                    {
+                        Go = true;
+                    }
                 }
             }
         }

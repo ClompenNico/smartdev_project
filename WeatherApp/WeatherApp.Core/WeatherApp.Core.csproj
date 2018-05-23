@@ -49,7 +49,6 @@
     <Compile Include="Services\LocationService.cs" />
     <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\WeatherService.cs" />
-    <Compile Include="Services\_TestService.cs" />
     <Compile Include="ViewModels\DayViewModel.cs" />
     <Compile Include="ViewModels\NotificationsViewModel.cs" />
     <Compile Include="ViewModels\TabDetailsViewModel.cs" />

@@ -31,6 +31,7 @@ namespace WeatherApp.Core.Services
             }
         }
 
+        //Save naar file
         public static void SaveToFile(string Togglevalue)
         {
             try
@@ -48,6 +49,7 @@ namespace WeatherApp.Core.Services
             }
         }
 
+        //Van file lezen
         public static void ReadFromFile()
         {
             try

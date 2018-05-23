@@ -16,17 +16,8 @@ namespace WeatherApp.iOS.Converters
 
         private UIImage GetImage(string value)
         {
-            /*
-            if (value == "partly-cloudy-night")
-            {
-                return UIImage.FromFile("Images/Currently/partly-cloudy-night.png");
-            }
-            else
-            {
-                return UIImage.FromFile("Images/details.png");
-            }
-            */
             
+            //Case om de icons correct te weergeven
             switch(value)
             {
                 case "clear-day":

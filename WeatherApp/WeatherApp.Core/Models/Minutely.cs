@@ -9,6 +9,7 @@ namespace WeatherApp.Core.Models
 {
     public class Minutely
     {
+        //WEATHER PAGE
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
     }

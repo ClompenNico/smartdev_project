@@ -15,6 +15,7 @@ namespace WeatherApp.Core.Services
         private readonly IMvxLocationWatcher _watcher;
         private readonly IMvxMessenger _messenger;
 
+        //DI
         public LocationService(IMvxLocationWatcher watcher, IMvxMessenger messenger)
         {
             _watcher = watcher;
@@ -22,16 +23,20 @@ namespace WeatherApp.Core.Services
             _watcher.Start(new MvxLocationOptions(), OnLocation, OnError);
         }
 
+        //LOCATIE MEEGEVEN (NODIG VOOR IN DE MESSAGE)
         private void OnLocation(MvxGeoLocation location)
         {
+            //MESSAGE OPVULLEN
             var message = new LocationMessage(this,
                                                 location.Coordinates.Latitude,
                                                 location.Coordinates.Longitude
-                                                /*10.232, 8.4545*/);
+                                                );
 
+            //MESSAGE PUBLISHEN
             _messenger.Publish(message);
         }
 
+        //ERROR
         private void OnError(MvxLocationError error)
         {
             Mvx.Error("Seen location error {0}", error.Code);

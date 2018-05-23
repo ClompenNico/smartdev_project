@@ -19,20 +19,10 @@ namespace WeatherApp.iOS
 
         public override void ViewDidLoad()
         {
-            //DAILYSWITCH GOEDZETTEN
-
-            //GlobalVariables.FileValue = "True"; //NotificationService.ReadFromFile();
-
-            //DIT IS VOOR ALS DE APP DE EERSTE KEER WORDT OPGESTART ZODAT ER GEEN ERROR KOMT
-            //Toggle value current toggle waarde geven
-            //GlobalVariables.ToggleDailyValue = btnToggleDaily.On;
-
-            //Toggle value opslaan
-            //NotificationService.SaveToFile(GlobalVariables.ToggleDailyValue.ToString());
-
-            //Toggle value ophalen
+            //Toggle value ophalen voor switch
             NotificationService.ReadFromFile();
 
+            //Switch correct togglen voor als app opstart
             if (GlobalVariables.FileValue == "True")
             {
                 btnToggleDaily.SetState(true, animated: false);
@@ -41,49 +31,27 @@ namespace WeatherApp.iOS
                 btnToggleDaily.SetState(false, animated: false);
             }
 
-            //Binding
-
             base.ViewDidLoad();
 
+            //Binding
             MvxFluentBindingDescriptionSet<NotificationsView, NotificationsViewModel> set = this.CreateBindingSet<NotificationsView, NotificationsViewModel>();
 
             set.Bind(btnToggleDaily).To(vm => vm.ToggleDailyCommand);
-            //set.Bind(lblFileValue).To(vm => vm.);
 
             set.Apply();
-
-            //--------------DIT IS TIJDELIJK, VERGEET DIT NIET TE VERWIJDEREN
-            if (GlobalVariables.FileValue == null)
-            {
-                lblFileValue.Text = "False";
-            }
-            else
-            {
-                lblFileValue.Text = GlobalVariables.FileValue.ToString();
-            }
         }
         
         partial void MyToggleValueChanged(UISwitch sender)
         {
+            //Globale variabele opvullen met status van de switch
             GlobalVariables.ToggleDailyValue = btnToggleDaily.On;
 
-            //GlobalVariables.ToggleDailyValue = true;
-            //GlobalVariables.FileValue = "True";
-
+            //Daily notificatie status opslaan in file
             NotificationService.SaveToFile(GlobalVariables.ToggleDailyValue.ToString());
-
-            lblValue.Text = GlobalVariables.ToggleDailyValue.ToString();
-            //--------------DIT IS TIJDELIJK, VERGEET DIT NIET TE VERWIJDEREN
-            if (GlobalVariables.FileValue == null)
-            {
-                lblFileValue.Text = "False";
-            }
-            else
-            {
-                lblFileValue.Text = GlobalVariables.FileValue.ToString();
-            }
         }
 
+
+        //Test button voor notificatie te sturen
         partial void BtnNotification30256_TouchUpInside(btnNotification sender)
         {
 
@@ -94,16 +62,11 @@ namespace WeatherApp.iOS
             notification.FireDate = NSDate.FromTimeIntervalSinceNow(5);
 
             // configure the alert
+            string body = GlobalVariables.weatherUpdate.Currently.Temp + " " + GlobalVariables.weatherUpdate.Currently.Summary;
             //notification.AlertLaunchImage = "iconv3.png";
-            
-            //Watch OS
-            notification.AlertAction = "View Alert!";
-            //Phone
-            notification.AlertTitle = "Today's prediction";
-            GlobalVariables.AlertBody = "7°c Partly cloudy for the hour";
-            notification.AlertBody = GlobalVariables.AlertBody;
-
-            //notification.AlertBody = "Your one minute alert has fired!";
+            notification.AlertAction = "Today's prediction"; //Watch Alert
+            notification.AlertTitle = "Today's prediction"; //View Alert
+            notification.AlertBody = body;
 
             // modify the badge
             notification.ApplicationIconBadgeNumber = 1;

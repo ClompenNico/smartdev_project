@@ -20,6 +20,8 @@ namespace WeatherApp.iOS
         {
             base.LayoutSubviews();
 
+            //Binding met de labels en iconen van de cellen
+
             MvxFluentBindingDescriptionSet<WeekTableCell, Weather.Daily.DailyDatas> set = new MvxFluentBindingDescriptionSet<WeekTableCell, Weather.Daily.DailyDatas>(this);
             
             set.Bind(lblDag).To(vm => vm.Day);
@@ -28,17 +30,22 @@ namespace WeatherApp.iOS
 
             set.Bind(lblTemperatuur).To(vm => vm.TempHigh);
 
+            //Icon binden EN MET CONVERTER!
             set.Bind(imgIcon)
                 .For(img => img.Image)
                 .To(vm => vm.Icon)
                 .WithConversion<StringToImageConverter>();
 
+            //Bindings applyen
             set.Apply();
 
 
             //============BACKGROUND COLOR INSTELLEN================
+            
+            //Uur opvragen voor if else statement
             int currentTime = DateTime.Now.Hour;
 
+            //Andere background kleur naar gelange het uur
             if (currentTime <= 6 || currentTime >= 21)
             {
                 this.BackgroundColor = UIColor.FromRGB(27, 41, 54);

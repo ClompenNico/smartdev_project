@@ -8,6 +8,7 @@ C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSi
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSimulator\Debug\MvvmCross.Platform.dll
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSimulator\Debug\WeatherApp.Core.pdb
+C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSimulator\Debug\WeatherApp.Core.dll.mdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSimulator\Debug\MvvmCross.Core.pdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSimulator\Debug\MvvmCross.Core.dll.mdb
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSimulator\Debug\MvvmCross.Plugins.Messenger.pdb
@@ -28,4 +29,3 @@ C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\obj\iPhoneSi
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\obj\iPhoneSimulator\Debug\WeatherApp.Widget.csproj.CopyComplete
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\obj\iPhoneSimulator\Debug\WeatherApp.Widget.dll
 C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\obj\iPhoneSimulator\Debug\WeatherApp.Widget.pdb
-C:\Users\nicoc\source\smartdev_project\WeatherApp\WeatherApp.Widget\bin\iPhoneSimulator\Debug\WeatherApp.Core.dll.mdb

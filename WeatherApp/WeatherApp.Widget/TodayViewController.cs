@@ -28,12 +28,9 @@ namespace WeatherApp.Widget
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            //functie locatie
-            GetLocation();
-            //GetWeatherData();
-            //lblVandaag.Text = currentTemperatuur;
 
-            // Do any additional setup after loading the view.
+            //Eerst locatie nodig voor data op te vragen
+            GetLocation();
         }
 
 
@@ -68,16 +65,9 @@ namespace WeatherApp.Widget
             //get weather in object plaatsen
             Weather weather = await weatherRepository.GetWeather();
 
-            //Weather = await _weatherService.GetWeather();
-
             //labels opvullen
             lblTemperatuur.Text = weather.Currently.Temp;
             lblSummary.Text = weather._Daily.Summary;
-
-            //lblTemperatuur.Text = Weather.Currently.Temp;
-
-            //string currentTemperatuur = Weather.Currently.Temp;
-
         }
 
         public void WidgetPerformUpdate(Action<NCUpdateResult> completionHandler)

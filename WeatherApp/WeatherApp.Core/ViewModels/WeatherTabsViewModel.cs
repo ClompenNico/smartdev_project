@@ -15,6 +15,7 @@ namespace WeatherApp.Core.ViewModels
 {
     public class WeatherTabsViewModel : MvxViewModel
     {
+        //WEER (EERSTE TWEE PAGINA'S)
         private Weather _weather;
         public Weather Weather
         {
@@ -26,6 +27,7 @@ namespace WeatherApp.Core.ViewModels
             }
         }
 
+        //LIST (LAATSTE PAGINA)
         private List<Weather.Daily.DailyDatas> _dailyDataList;
         public List<Weather.Daily.DailyDatas> DailyDataList
         {
@@ -37,12 +39,13 @@ namespace WeatherApp.Core.ViewModels
             }
         }
 
-        //Luisteren naar het bericht met de locatie
+        //Voor bericht met de locatie
         private readonly IMvxMessenger _messenger;
         private readonly MvxSubscriptionToken _token;
 
         private readonly IMvxNavigationService _navigationService;
         protected readonly IWeatherService _weatherService;
+
         //create a lazy instance for each viewmodel of the tabs in the tabview
         private readonly Lazy<WeatherViewModel> _weatherViewModel;
         private readonly Lazy<TabDetailsViewModel> _tabDetailsViewModel;
@@ -52,8 +55,6 @@ namespace WeatherApp.Core.ViewModels
         public WeatherViewModel WeatherVM => _weatherViewModel.Value;
         public TabDetailsViewModel TabDetailsVM => _tabDetailsViewModel.Value;
         public TabWeekTableViewModel TabWeekVM => _tabWeekTableViewModel.Value;
-
-        
 
         public WeatherTabsViewModel(IWeatherService weatherService, IMvxNavigationService navigationService, IMvxMessenger messenger)
         {
@@ -67,17 +68,24 @@ namespace WeatherApp.Core.ViewModels
             _navigationService = navigationService;
 
             //Weer service
-            this._weatherService = weatherService;
-
-            //Data opvragen
-           
+            this._weatherService = weatherService;           
 
             //initialize lazy instance via ioc construct
             _weatherViewModel = new Lazy<WeatherViewModel>(Mvx.IocConstruct<WeatherViewModel>);
             _tabDetailsViewModel = new Lazy<TabDetailsViewModel>(Mvx.IocConstruct<TabDetailsViewModel>);
             _tabWeekTableViewModel = new Lazy<TabWeekTableViewModel>(Mvx.IocConstruct<TabWeekTableViewModel>);
 
+        }
 
+        //Voor de tests
+        public WeatherTabsViewModel(IWeatherService weatherService)
+        {
+            this._weatherService = weatherService;
+            /*
+            GlobalVariables._LATITUDE = 50;
+            GlobalVariables._LONGITUDE = 3;
+            GetWeatherData();
+            */
         }
 
         private void OnLocationMessage(LocationMessage message)
@@ -87,6 +95,7 @@ namespace WeatherApp.Core.ViewModels
             GetWeatherData();
         }
 
+        //Weather data opvragen + opvullen
         public async void GetWeatherData()
         {
             Weather = await _weatherService.GetWeather();

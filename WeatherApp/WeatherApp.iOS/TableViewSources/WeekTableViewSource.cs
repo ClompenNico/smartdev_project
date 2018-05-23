@@ -14,6 +14,8 @@ namespace WeatherApp.iOS.TableViewSources
 
         }
 
+        //Zorgt voor het beheer van de tableview waaraan hij gekoppeld is
+        //Responsible voor het weergeven van cellen, reorderen van rijen en verwijderen van rijen
         protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath, object item)
         {
             var cell = (WeekTableCell)tableView.DequeueReusableCell(WeekTableCell.Identifier, indexPath);

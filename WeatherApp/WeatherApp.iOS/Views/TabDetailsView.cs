@@ -12,6 +12,7 @@ namespace WeatherApp.iOS
     [MvxFromStoryboard(StoryboardName = "Main")]
     public partial class TabDetailsView : MvxViewController<TabDetailsViewModel>
     {
+        //Alle verschillende animaties declareren
         LOTAnimationView _uvIndexAnimation;
         LOTAnimationView _pressureAnimation;
         LOTAnimationView _humidityAnimation;
@@ -30,7 +31,7 @@ namespace WeatherApp.iOS
 
             MvxFluentBindingDescriptionSet<TabDetailsView, TabDetailsViewModel> set = this.CreateBindingSet<TabDetailsView, TabDetailsViewModel>();
 
-            //ANIMATIES OPVRAGEN, GROTE INSTELLEN, SCALEN, LOOP & BINDEN
+            //ANIMATIES OPVRAGEN, GROTE INSTELLEN, SCALEN, LOOP & BINDEN MET HUN IMAGE
             this._uvIndexAnimation = LOTAnimationView.AnimationNamed("UVIndexAnim.json"); //your animation name for the uv sun
             this._uvIndexAnimation.Frame = new CoreGraphics.CGRect(0, 0, 50, 50); //Depending on the dimensions of you animation and cell
             this._uvIndexAnimation.ContentMode = UIViewContentMode.ScaleAspectFill;
@@ -56,7 +57,6 @@ namespace WeatherApp.iOS
             this._dewpointAnimation = LOTAnimationView.AnimationNamed("dewing.json");
             this._dewpointAnimation.Frame = new CoreGraphics.CGRect(0, 0, 50, 50); //Depending on the dimensions of you animation and cell
             this._dewpointAnimation.ContentMode = UIViewContentMode.ScaleAspectFill;
-            this._dewpointAnimation.LoopAnimation = true;
             this.imgDew.AddSubview(this._dewpointAnimation);
 
             this._apparenttempAnimation = LOTAnimationView.AnimationNamed("apparenttemp.json");
@@ -71,6 +71,7 @@ namespace WeatherApp.iOS
             .WithConversion<StringToImageConverter>();
             */
 
+            //Alle details binden met de waarden
             set.Bind(lblApparentTemp).To(vm => vm.Weather.Currently.ApparentTemp);
             set.Bind(lblHum).To(vm => vm.Weather.Currently.Hum);
             set.Bind(lblUv).To(vm => vm.Weather.Currently.UvIndex);
@@ -83,6 +84,7 @@ namespace WeatherApp.iOS
 
         public override void ViewWillAppear(bool animated)
         {
+            //Huidige tijd opvragen voor background
             int currentTime = DateTime.Now.Hour;
 
             base.ViewWillAppear(animated);
@@ -95,6 +97,7 @@ namespace WeatherApp.iOS
             this._dewpointAnimation.Play();
             this._apparenttempAnimation.Play();
 
+            //If else statement voor background op basis van uur
             if (currentTime <= 6 || currentTime >= 21)
             {
                 this.View.BackgroundColor = UIColor.FromRGB(27, 41, 54);

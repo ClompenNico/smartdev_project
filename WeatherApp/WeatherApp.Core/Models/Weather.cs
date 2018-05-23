@@ -9,6 +9,7 @@ namespace WeatherApp.Core.Models
 {
     public class Weather
     {
+        //WEATHER
         [JsonProperty(PropertyName = "latitude")]
         public double Latitude { get; set; }
         [JsonProperty(PropertyName = "longitude")]
@@ -34,6 +35,8 @@ namespace WeatherApp.Core.Models
             public string Summary { get; set; }
         }
 
+
+        //WEKELIJKS
         public class Daily
         {
             [JsonProperty(PropertyName = "summary")]
@@ -57,6 +60,8 @@ namespace WeatherApp.Core.Models
                         dtDateTime = dtDateTime.AddSeconds(Time);
                         return dtDateTime.DayOfWeek.ToString();
                     }
+
+                    set { }
                 }
 
                 [JsonProperty(PropertyName = "summary")]
@@ -71,6 +76,7 @@ namespace WeatherApp.Core.Models
                 public string TempHigh
                 {
                     get { return Math.Round(TemperatureHigh).ToString() + "°c"; }
+                    set { }
                 }
 
                 [JsonProperty(PropertyName = "temperatureLow")]

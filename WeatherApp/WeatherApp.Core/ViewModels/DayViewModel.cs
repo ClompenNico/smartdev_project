@@ -23,8 +23,7 @@ namespace WeatherApp.Core.ViewModels
         }
 
         //service aan spreken
-        protected readonly IWeatherService _weatherService;
-
+        //protected readonly IWeatherService _weatherService;
 
         public DayViewModel()
         {

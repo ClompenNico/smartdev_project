@@ -10,7 +10,6 @@ namespace WeatherApp.Core.Models
     public class Currently
     {
         //WEATHER PAGE
-
         [JsonProperty(PropertyName = "time")]
         public long Time { get; set; }
 
